@@ -16,8 +16,8 @@ const INFO = {
 		title: "About me",
 		description:
 			"I'm Andrew, a software engineer based in New York City where I was born and raised.\
-			My main interests are in data platforms, MLOps, and operations research. Outside of\
-			programming, I enjoy reading detective fiction, practicing singing, and cooking.",
+			This is a hub where I am planning to host stuff I've written, personal projects, random\
+			musings, among other things.",
 	},
 
 	about: {
