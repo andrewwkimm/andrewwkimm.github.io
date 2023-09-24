@@ -1,1 +1,1 @@
-[https://andrewwkimm.github.io/](https://https://andrewwkimm.github.io/)
+[andrewwkimm.github.io](https://andrewwkimm.github.io/)
