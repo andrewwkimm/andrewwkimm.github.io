@@ -11,19 +11,19 @@ html {
   font-size: 12px;
 
   @include breakpoint($medium) {
-    font-size: 14px;
-  }
-
-  @include breakpoint($large) {
     font-size: 16px;
   }
 
-  @include breakpoint($x-large) {
+  @include breakpoint($large) {
     font-size: 18px;
   }
 
-  -webkit-text-size-adjust: 90%;
-  -ms-text-size-adjust: 90%;
+  @include breakpoint($x-large) {
+    font-size: 22px;
+  }
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 /* Remove margin */
