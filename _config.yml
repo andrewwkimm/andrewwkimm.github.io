@@ -20,7 +20,7 @@ title                    : "Andrew Kim"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Andrew Kim"
-description              : "Korean-Englishman in New York"
+description              :
 url                      : https://andrewwkimm.github.io
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Andrew Kim"
   avatar           : "assets/images/profile_picture.JPG"
-  bio              : "Softwareman in New York"
+  bio              : "Korean-Englishman in New York"
   location         : "New York, NY"
   email            :
   links:
