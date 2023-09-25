@@ -13,7 +13,14 @@ search: false
     position: relative;
     font-size: 18px;
     font-family: "Lora", serif;
-    color: #515151;
+}
+
+ul {
+    margin-bottom: -5px;
+}
+
+li {
+    margin-bottom: -5px;
 }
 
 .greedy-nav a {
