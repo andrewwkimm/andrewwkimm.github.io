@@ -36,10 +36,10 @@ across the enterprise.
     <span style="float:left;"><em>Data Engineer</em></span>
     <span style="float:right;"><em>August 2022 - January 2023</em></span><br>
 </p>   
-- I've primarily worked with two clients, a Biotech Startup and a
+- I've primarily worked with two clients, a biotech startup and a
 financial services company during my time at Hero Digital. My role
-was to primarily build out various different data pipelines and
-maintain the infrastructure behind them.
+was to primarily build out data pipelines for analytics and data
+science end users as well as maintain their infrastructure.
 
 <p style="margin-bottom: -16px;">
     <span style="float:left;"><strong>Analytic Partners</strong></span>
@@ -47,9 +47,10 @@ maintain the infrastructure behind them.
     <span style="float:left;"><em>Analyst</em></span>
     <span style="float:right;"><em>September 2021 - August 2022</em></span><br>
 </p>   
-- Analytic Partners is a consultancy that specializes in Marketing Mix Modeling.
-I've built out many models for the primary client I worked with, a Fortune 50
-CPG retail company.
+- Analytic Partners is a a marketing analytics consultancy that specializes 
+in Marketing Mix Modeling. I was in a project for a Fortune 50 CPG retail
+company where I started with modeling and delivering insights but slowly
+grew my role to gaining exposure to ETL pipelines and data modeling. 
 
 # Education
 
