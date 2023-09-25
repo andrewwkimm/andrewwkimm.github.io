@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Andrew Kim"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/images/profile_picture.JPG"
   bio              : "Softwareman in New York"
   location         : "New York, NY"
   email            :
