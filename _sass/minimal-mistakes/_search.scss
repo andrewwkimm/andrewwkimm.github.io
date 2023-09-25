@@ -14,14 +14,18 @@
   height: $nav-toggle-height;
   border: 0;
   outline: none;
-  color: $primary-color;
+  color: #808080;
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 
   &:hover {
-    color: mix(#000, $primary-color, 25%);
+    color: mix(#000, #808080, 25%);
+  }
+
+  &:focus {
+    outline-color: #808080;
   }
 }
 
@@ -120,13 +124,13 @@
 }
 
 .archive__item-title .ais-Highlight {
-  color: $primary-color;
+  color: #808080;
   font-style: normal;
   text-decoration: underline;
 }
 
 .archive__item-excerpt .ais-Highlight {
-  color: $primary-color;
+  color: #808080;
   font-style: normal;
   font-weight: bold;
 }
