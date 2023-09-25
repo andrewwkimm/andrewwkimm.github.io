@@ -12,9 +12,13 @@ search: false
 .page__content {
     position: relative;
     font-size: 18px;
+    font-family: "Lora", serif;
+    color: #515151;
 }
 
-.greedy-nav a { color: grey; }
+.greedy-nav a {
+    color: grey;
+}
 
 .masthead__menu-item {
     color: grey;
