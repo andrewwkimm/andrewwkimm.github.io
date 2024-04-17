@@ -1,22 +1,14 @@
 ---
-layout: archive
+layout: base
 ---
 
-{{ content }}
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<!-- Adds picture to index -->
+<!-- <img alt="Andrew Kim" src="/assets/p1.JPG" style="float: right; max-width: 33%; margin: 0 0 1em 2em; border-radius: 999px"> -->
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
+  {{ content }}
 </div>
-
-{% include paginator.html %}
