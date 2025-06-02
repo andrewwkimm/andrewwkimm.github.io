@@ -69,7 +69,11 @@ minima:
       username: "andrewwkimm"
     }
   #  - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
-  #  - { platform: instagram,      user_url: "https://www.instagram.com/jekyll" }
+   - {
+      platform: instagram,
+      user_url: "https://www.instagram.com/andrewkim.io/",
+      username: "andrewkim.io"
+    }
   #  - { platform: keybase,        user_url: "https://keybase.io/jekyll" }
    - { 
       platform: linkedin,       
