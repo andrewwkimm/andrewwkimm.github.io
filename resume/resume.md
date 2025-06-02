@@ -10,7 +10,7 @@ permalink: /resume/
     <span style="float:left;"><strong>Elevance Health</strong></span>
     <span style="float:right;"><strong>New York, NY</strong></span><br>
     <span style="float:left;"><em>Data Engineer</em></span>
-    <span style="float:right;"><em>February 2023 – Present</em></span><br>
+    <span style="float:right;"><em>February 2023 – July 2024</em></span><br>
 </p>    
 - Coming soon!
 
@@ -36,7 +36,7 @@ permalink: /resume/
     <span style="float:left;"><strong>Baruch College</strong></span>
     <span style="float:right;"><strong>Gramercy Park, NY</strong></span><br>
     <span style="float:left;"><em>B.A. Mathematics,</em> Minor in Computer Science</span>
-    <span style="float:right;"><em>December 2020</em></span><br>
+    <span style="float:right;"><em>January 2021</em></span><br>
 </p>
 
 ## Other
