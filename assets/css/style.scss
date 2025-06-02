@@ -4,5 +4,11 @@
 
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize",
-  "minima/custom-styles";
+  "minima/initialize";
+  // "minima/custom-styles";
+
+  
+.site-footer .wrapper > div:last-child p {
+  font-size: 0.8em;
+  color: #666;
+}
