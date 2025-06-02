@@ -11,6 +11,7 @@ permalink: /reading_list/
 - **A Midsummer's Equation** (Keigo Higashino)
 - **A Pattern Language: Towns, Buildings, Construction** (Christopher Alexander)
 - **A Quiet Place** (Matsumoto Seicho)
+- **Academically Adrift: Limited Learning on College Campuses** (Richard Arum, Josipa Roksa)
 - **All She Was Worth** (Miyuki Miyabe)
 - **And Then There Were None** (Agatha Christie)
 - **Angela's Ashes: A Memoir** (Frank McCourt)
