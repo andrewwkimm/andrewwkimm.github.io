@@ -44,8 +44,8 @@ Built a Streamlit dashboard deployed on Snowflake that gave visibility into data
 **koffee**
 - A lightweight video file translation tool built for myself and a K-pop and Anime Discord community
 
-## SKILLS & INTEREST
-<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+<h2 style="margin-bottom: 0em;">SKILLS & INTEREST</h2>
+<hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
 **Programming:** Python, SQL
 **Databases:** Snowflake, BigQuery, PostgreSQL
