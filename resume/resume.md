@@ -47,10 +47,11 @@ I am a part-time consultant for a cosmetology school, building their data platfo
 <h2 style="margin-bottom: 0em;">SKILLS & INTEREST</h2>
 <hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
-**Programming:** Python, SQL<br>
-**Databases:** Snowflake, BigQuery, PostgreSQL<br>
-**Technologies:** Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, Terraform<br>
-**Interests:** Murder mysteries, Military history, Retro video games, Singing
+- **Programming:** Python, SQL
+- **Databases:** Snowflake, BigQuery, PostgreSQL
+- **Technologies:** Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, Terraform
+- **Interests:** Murder mysteries, Military history, Retro video games, Singing
+
 
 <h2 style="margin-bottom: 0em;">EDUCATION</h2>
 <hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
