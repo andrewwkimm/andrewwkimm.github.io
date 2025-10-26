@@ -68,3 +68,21 @@ permalink: /portfolio/
     <img src="../assets/images/koffee.png" alt="Image 1" style="max-width: 100%;">
   </div>
 </div>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 1.5em;">
+  <div style="flex: 1; padding-right: 8em;">
+    <p style="font-size: 1.25em; font-weight: bold; margin: 0 0 0.5em 0;">
+      RAWG Video Game Data Pipeline
+    </p>
+    <p>
+      I built this data pipeline as I was getting into the Data Engineering space to playtest various tools I found interesting, but to also pique my curiosity on video game trends. It sources data from RAWG's public API and is ultimately fed into a Streamlit web app to visualize the trends.
+    </p>
+<p style="font-weight: bold;">
+    Links:
+    <a href="https://github.com/andrewwkimm/RAWG-Data-Pipeline" target="_blank">GitHub</a>
+</p>
+  </div>
+  <div style="flex: 0 0 200px;">
+    <img src="../assets/images/rawg.png" alt="Image 1" style="max-width: 100%;">
+  </div>
+</div>
