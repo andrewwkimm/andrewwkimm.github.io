@@ -6,7 +6,7 @@ permalink: /portfolio/
 ## Consulting
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 1.5em;">
-  <div style="flex: 1; padding-right: 10em;">
+  <div style="flex: 1; padding-right: 8em;">
     <p style="font-size: 1.25em; font-weight: bold; margin: 0 0 0.5em 0;">
       American Beauty Institute
     </p>
