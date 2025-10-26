@@ -5,7 +5,8 @@ permalink: /resume/
 ---
 
 ## EXPERIENCE
----
+<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+
 <p style="margin-bottom: 4px;">
     <span style="float:left;"><strong>American Beauty Institute</strong></span>
     <span style="float:right;"><strong>New York, NY</strong></span><br>
@@ -39,18 +40,21 @@ Built a Streamlit dashboard deployed on Snowflake that gave visibility into data
 - Reduced BigQuery computation costs by ~76% ($15K to $3.5K) by implementing query optimization best practices including partitioning, pre-aggregation, data filtering, caching frequently used queries
 
 ## PROJECT
----
-### koffee
+<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+
+**koffee**
 - A lightweight video file translation tool built for myself and a K-pop and Anime Discord community
 
 ## SKILLS & INTEREST
----
+<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+
 **Programming:** Python, SQL
 **Databases:** Snowflake, BigQuery, PostgreSQL
 **Technologies:** Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, Terraform
 **Interests:** Murder mysteries, Military history, Retro video games, Singing
 
 ## EDUCATION
+<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
 
 <p style="margin-bottom: 16px;">
     <span style="float:left;"><strong>Baruch College</strong></span>
@@ -60,6 +64,8 @@ Built a Streamlit dashboard deployed on Snowflake that gave visibility into data
 </p>
 
 ## Other
+<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+
 <p style="margin-bottom: 4px;">
     <span style="float:left;"><strong>At The Table</strong></span>
     <span style="float:right;"><strong>Brooklyn, NY</strong></span><br>
