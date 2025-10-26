@@ -40,9 +40,31 @@ permalink: /portfolio/
     <a href="https://github.com/andrewwkimm/doe-high-school-scorecard/tree/nodejs-express" target="_blank">GitHub</a>,
     <a href="https://doe-high-school-scorecard.onrender.com/" target="_blank">Website</a>
 </p>
-
   </div>
   <div style="flex: 0 0 200px;">
     <img src="../assets/images/at-the-table.webp" alt="Image 1" style="max-width: 100%;">
+  </div>
+</div>
+
+## Projects
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 1.5em;">
+  <div style="flex: 1; padding-right: 8em;">
+    <p style="font-size: 1.25em; font-weight: bold; margin: 0 0 0.5em 0;">
+      koffee
+    </p>
+    <p>
+      koffee is a lightweight CLI tool that translates a given video file to the target language, outputting a translated file with the subtitled embedded into it.
+    </p>
+    <p>
+      It was developed for myself and friends at a Discord community where there are many fans of K-pop and Anime, serving dozens of users weekly.
+    </p>
+<p style="font-weight: bold;">
+    Links:
+    <a href="https://github.com/andrewwkimm/koffee" target="_blank">GitHub</a>
+</p>
+  </div>
+  <div style="flex: 0 0 200px;">
+    <img src="../assets/images/koffee.png" alt="Image 1" style="max-width: 100%;">
   </div>
 </div>
