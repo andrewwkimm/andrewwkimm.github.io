@@ -48,7 +48,7 @@ Built a Streamlit dashboard deployed on Snowflake that gave visibility into data
 **Programming:** Python, SQL
 **Databases:** Snowflake, BigQuery, PostgreSQL
 **Technologies:** Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, Terraform
-**Interest:** Murder mysteries, Military history, Retro video games, Singing
+**Interests:** Murder mysteries, Military history, Retro video games, Singing
 
 ## EDUCATION
 
