@@ -41,8 +41,10 @@ I am a part-time consultant for a cosmetology school, building their data platfo
 <h2 style="margin-bottom: 0em;">PROJECT</h2>
 <hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
-**koffee** ([Source Code](https://github.com/andrewwkimm/koffee))
-- A lightweight video file translation tool built for myself and a K-pop and Anime Discord community
+<p><strong>koffee</strong> (<a href="https://github.com/andrewwkimm/koffee">Source Code</a>)</p>
+<ul style="margin-top: -10px;">
+  <li>A lightweight video file translation tool built for myself and a K-pop and Anime Discord community</li>
+</ul>
 
 <h2 style="margin-bottom: 0em;">SKILLS & INTEREST</h2>
 <hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
