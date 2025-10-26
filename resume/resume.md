@@ -3,8 +3,8 @@ layout: page
 permalink: /resume/
 ---
 
-## EXPERIENCE
-<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+<h2 style="margin-bottom: 0em;">EXPERIENCE</h2>
+<hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
 <p style="margin-bottom: 4px;">
     <span style="float:left;"><strong>American Beauty Institute</strong></span>
@@ -27,8 +27,8 @@ I am a part-time consultant for a cosmetology school, building their data platfo
 - Designed and developed a centralized ingestion framework for a data migration project which is ran either via CLI or scheduled Airflow runs, replacing the pre-existing method of running ad hoc Python scripts and SQL queries
 - Developed dynamic compute allocation feature for the framework that automatically adjusts AWS Glue DPUs and Snowflake warehouse size based on the input data volume to prevent users from over-provisioning jobs with max settings
 - Established a previously near-nonexistent data quality, monitoring, and testing suite throughout the pipeline, eliminating incidents due to duplicate data and vastly reduced time spent on data quality issues each sprint
-Built a Streamlit dashboard deployed on Snowflake that gave visibility into data quality and observability reports to stakeholders and engineers; this dashboard was adopted by at least 2 other teams as of my last day at Elevance
-- Owned the documenation for the ingestion framework, data quality and validations, and unit and integration testing; guided other engineers and analysts on best practices and onboarded new members
+- Built a Streamlit dashboard deployed on Snowflake that gave visibility into data quality and observability reports to stakeholders and engineers; this dashboard was adopted by at least 2 other teams as of my last day at Elevance
+- Owned the documentation for the ingestion framework, data quality and validations, and unit and integration testing; guided other engineers and analysts on best practices and onboarded new members
 
 <p style="margin-bottom: 4px;">
     <span style="float:left;"><strong>Hero Digital</strong></span>
@@ -38,8 +38,8 @@ Built a Streamlit dashboard deployed on Snowflake that gave visibility into data
 </p>
 - Reduced BigQuery computation costs by ~76% ($15K to $3.5K) by implementing query optimization best practices including partitioning, pre-aggregation, data filtering, caching frequently used queries
 
-## PROJECT
-<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+<h2 style="margin-bottom: 0em;">PROJECT</h2>
+<hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
 **koffee**
 - A lightweight video file translation tool built for myself and a K-pop and Anime Discord community
@@ -52,8 +52,8 @@ Built a Streamlit dashboard deployed on Snowflake that gave visibility into data
 **Technologies:** Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, Terraform
 **Interests:** Murder mysteries, Military history, Retro video games, Singing
 
-## EDUCATION
-<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+<h2 style="margin-bottom: 0em;">EDUCATION</h2>
+<hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
 <p style="margin-bottom: 16px;">
     <span style="float:left;"><strong>Baruch College</strong></span>
@@ -62,8 +62,8 @@ Built a Streamlit dashboard deployed on Snowflake that gave visibility into data
     <span style="float:right;"><em>January 2021</em></span><br>
 </p>
 
-## Other
-<hr style="margin-top: 0.2em; margin-bottom: 0.4em; border: 1px solid black;">
+<h2 style="margin-bottom: 0em;">OTHER</h2>
+<hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
 <p style="margin-bottom: 4px;">
     <span style="float:left;"><strong>At The Table</strong></span>
