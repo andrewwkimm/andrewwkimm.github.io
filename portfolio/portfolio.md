@@ -86,3 +86,24 @@ permalink: /portfolio/
     <img src="../assets/images/rawg.png" alt="Image 1" style="max-width: 100%;">
   </div>
 </div>
+
+## Open Source Contributions
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 1.5em;">
+  <div style="flex: 1; padding-right: 8em;">
+    <p style="font-size: 1.25em; font-weight: bold; margin: 0 0 0.5em 0;">
+      LlamaIndex
+    </p>
+    <p>
+      I added support for pathlib objects to one of the most commonly used modules in LlamaIndex, the <code>SimpleDirectoryReader</code>, after I noticed it only accepted string paths.
+    </p>
+<p style="font-weight: bold;">
+    Links:
+    <a href="https://github.com/run-llama/llama_index/pull/16108" target="_blank">Pull Request</a>,
+    <a href="https://github.com/run-llama/llama_index/issues/16030" target="_blank">Issue</a>
+</p>
+  </div>
+  <div style="flex: 0 0 200px;">
+    <img src="../assets/images/llama-index.jpeg" alt="Image 1" style="max-width: 100%;">
+  </div>
+</div>
