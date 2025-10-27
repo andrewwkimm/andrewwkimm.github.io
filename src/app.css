@@ -25,7 +25,7 @@ body {
 
 /* Minima's wrapper - this is KEY for the spacing */
 .wrapper {
-  max-width: calc(800px - (20px * 2));
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 0px;
