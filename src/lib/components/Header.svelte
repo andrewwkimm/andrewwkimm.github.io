@@ -24,12 +24,12 @@
     border-top: 5px solid #424242;
     border-bottom: 1px solid #e8e8e8;
     min-height: 55.95px;
-    line-height: 54px;
+    line-height: 60px;
     position: relative;
   }
 
   .site-title {
-    font-size: 26px;
+    font-size: 31px;
     font-weight: 300;
     letter-spacing: -1px;
     margin-bottom: 0;
@@ -43,13 +43,14 @@
 
   .site-nav {
     float: right;
-    line-height: 54px;
+    line-height: 60px;
   }
 
   .page-link {
     color: #111;
     line-height: 1.5;
-    margin-left: 20px;
+    margin-left: 30px;
+    font-size: 18px;
   }
 
   .page-link:hover {
