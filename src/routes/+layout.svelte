@@ -1,11 +1,15 @@
-<script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
-
-	let { children } = $props();
+<script>
+  import Header from '$lib/components/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
+  import '../app.css';
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
+<Header />
 
-{@render children?.()}
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <slot />
+  </div>
+</main>
+
+<Footer />
