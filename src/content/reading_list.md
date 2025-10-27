@@ -1,10 +1,6 @@
----
-layout: page
-title: Reading List
-permalink: /reading_list/
----
-
 ## Books I've enjoyed or planning to read
+
+<br>
 
 - **40 Puzzles and Problems in Probability and Mathematical Statistics** (Wolfgang Schwarz)
 - **A Death in Tokyo** (Keigo Higashino)
