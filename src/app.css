@@ -1,1 +1,64 @@
 @import "tailwindcss";
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Minima's wrapper - this is KEY for the spacing */
+.wrapper {
+  max-width: calc(800px - (20px * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    max-width: 100%;
+  }
+}
+
+/* Page content area */
+.page-content {
+  padding: 20px 0;
+  flex: 1 0 auto;
+}
+
+/* Homepage specific */
+.home {
+  margin-bottom: 30px;
+}
+
+.home p {
+  margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
