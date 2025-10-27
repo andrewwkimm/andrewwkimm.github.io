@@ -24,10 +24,10 @@ I am a part-time consultant for a cosmetology school, building their data platfo
     <span style="float:left;"><em>Data Engineer</em></span>
     <span style="float:right;"><em>February 2023 – July 2024</em></span><br>
 </p>
-- Designed and developed a centralized ingestion framework for a data migration project which is ran either via CLI or scheduled Airflow runs, replacing the pre-existing method of running ad hoc Python scripts and SQL queries
-- Developed dynamic compute allocation feature for the framework that automatically adjusts AWS Glue DPUs and Snowflake warehouse size based on the input data volume to prevent users from over-provisioning jobs with max settings
-- Established a previously near-nonexistent data quality, monitoring, and testing suite throughout the pipeline, eliminating incidents due to duplicate data and vastly reduced time spent on data quality issues each sprint
-- Built a Streamlit dashboard deployed on Snowflake that gave visibility into data quality and observability reports to stakeholders and engineers; this dashboard was adopted by at least 2 other teams as of my last day at Elevance
+- Designed and developed a centralized ingestion framework for a data migration project which is can be ran via CLI or scheduled Airflow runs, replacing manual processes of ad hoc scripts and queries
+- Developed dynamic compute allocation feature for the framework that automatically adjusts AWS and Snowflake settings based on the input data volume to save cloud compute costs
+- Established a previously near-nonexistent data quality, monitoring, and testing suite throughout the pipeline, eliminating duplicate data incidents and vastly reduced time spent on data quality issues each sprint
+- Built a Streamlit dashboard deployed on Snowflake that gave visibility into data quality and observability reports to stakeholders and engineers
 - Owned the documentation for the ingestion framework, data quality and validations, and unit and integration testing; guided other engineers and analysts on best practices and onboarded new members
 
 <p style="margin-bottom: 4px;">
@@ -36,7 +36,7 @@ I am a part-time consultant for a cosmetology school, building their data platfo
     <span style="float:left;"><em>Data Engineer</em></span>
     <span style="float:right;"><em>August 2022 – January 2023</em></span><br>
 </p>
-- Reduced BigQuery computation costs by ~76% ($15K to $3.5K) by implementing query optimization best practices including partitioning, pre-aggregation, data filtering, caching frequently used queries
+- Reduced BigQuery computation costs by implementing query optimization best practices including partitioning, pre-aggregation, data filtering, caching frequently used queries
 
 <h2 style="margin-bottom: 0em;">PROJECT</h2>
 <hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
