@@ -26,7 +26,7 @@ I am a part-time consultant for a cosmetology school, building their data platfo
 </p>
 - Designed and developed a centralized ingestion framework for a data migration project which is can be ran via CLI or scheduled Airflow runs, replacing manual processes of ad hoc scripts and queries
 - Developed dynamic compute allocation feature for the framework that automatically adjusts AWS and Snowflake settings based on the input data volume to save cloud compute costs
-- Established a previously near-nonexistent data quality, monitoring, and testing suite throughout the pipeline, eliminating duplicate data incidents and vastly reduced time spent on data quality issues each sprint
+- Established a previously near-nonexistent data quality, monitoring, and testing suite throughout the pipeline, eliminating duplicate data incidents and ruducing time spent on data quality issues each sprint
 - Built a Streamlit dashboard deployed on Snowflake that gave visibility into data quality and observability reports to stakeholders and engineers
 - Owned the documentation for the ingestion framework, data quality and validations, and unit and integration testing; guided other engineers and analysts on best practices and onboarded new members
 
