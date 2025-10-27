@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
 }
 
-/* Minima's wrapper - this is KEY for the spacing */
+/* Minima's wrapper */
 .wrapper {
   max-width: 800px;
   margin-right: auto;
@@ -63,7 +63,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Reset and base markdown styles */
+/* Markdown styles */
 ul {
   list-style-type: disc;
   padding-left: 2em;
@@ -72,6 +72,20 @@ ul {
 ol {
   list-style-type: decimal;
   padding-left: 2em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 h1 { font-size: 2em; font-weight: bold; }

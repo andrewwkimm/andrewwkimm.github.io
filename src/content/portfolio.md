@@ -1,9 +1,6 @@
----
-layout: default
-permalink: /portfolio/
----
-
 ## Consulting
+
+<br>
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 1.5em;">
   <div style="flex: 1; padding-right: 8em;">
@@ -20,7 +17,7 @@ permalink: /portfolio/
 </p>
   </div>
   <div style="flex: 0 0 200px;">
-    <img src="../assets/images/american-beauty-institute.png" alt="Image 1" style="max-width: 100%;">
+    <img src="/assets/images/american-beauty-institute.png" alt="Image 1" style="max-width: 100%;">
   </div>
 </div>
 
@@ -42,7 +39,7 @@ permalink: /portfolio/
 </p>
   </div>
   <div style="flex: 0 0 200px;">
-    <img src="../assets/images/at-the-table.webp" alt="Image 1" style="max-width: 100%;">
+    <img src="/assets/images/at-the-table.webp" alt="Image 1" style="max-width: 100%;">
   </div>
 </div>
 
@@ -65,7 +62,7 @@ permalink: /portfolio/
 </p>
   </div>
   <div style="flex: 0 0 200px;">
-    <img src="../assets/images/koffee.png" alt="Image 1" style="max-width: 100%;">
+    <img src="/assets/images/koffee.png" alt="Image 1" style="max-width: 100%;">
   </div>
 </div>
 
@@ -83,7 +80,7 @@ permalink: /portfolio/
 </p>
   </div>
   <div style="flex: 0 0 200px;">
-    <img src="../assets/images/rawg.png" alt="Image 1" style="max-width: 100%;">
+    <img src="/assets/images/rawg.png" alt="Image 1" style="max-width: 100%;">
   </div>
 </div>
 
@@ -104,6 +101,6 @@ permalink: /portfolio/
 </p>
   </div>
   <div style="flex: 0 0 200px;">
-    <img src="../assets/images/llama-index.jpeg" alt="Image 1" style="max-width: 100%;">
+    <img src="/assets/images/llama-index.jpeg" alt="Image 1" style="max-width: 100%;">
   </div>
 </div>
