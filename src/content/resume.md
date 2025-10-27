@@ -1,8 +1,3 @@
----
-layout: default
-permalink: /resume/
----
-
 <h2 style="margin-bottom: 0em;">EXPERIENCE</h2>
 <hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
@@ -10,13 +5,14 @@ permalink: /resume/
     <span style="float:left;"><strong>American Beauty Institute</strong></span>
     <span style="float:right;"><strong>New York, NY</strong></span><br>
     <span style="float:left;"><em>Data Engineering Consultant</em></span>
-    <span style="float:right;"><em>2025 - Present</em></span><br>
+    <span style="float:right;"><em>2025 – Present</em></span><br>
 </p>
 
 I am a part-time consultant for a cosmetology school, building their data platform alongside other data apps and tooling
 
 **Data Platform** ([Documentation](https://americanbeautyinstitute.readthedocs.io/) | [Source Code](https://github.com/AmericanBeautyInstitute/data-platform))
-- I am building American Beauty Institute’s end-to-end data platform on Google Cloud Platform, integrating their digital marketing, payments, and internal Google Sheets data into BigQuery, creating a single source of truth. Data marts prepared within the warehouse will be used to power other applications planned for development, such as a self-hosted dashboard and a Natural Language Query self-service web app (i.e., generate SQL queries to run against the warehouse to answer a user's data question).
+
+- I am building American Beauty Institute’s end-to-end data platform on Google Cloud Platform, integrating their digital marketing, payments, and operations data into BigQuery, creating a single source of truth.
 
 <p style="margin-bottom: 4px;">
     <span style="float:left;"><strong>Elevance Health</strong></span>
@@ -24,6 +20,7 @@ I am a part-time consultant for a cosmetology school, building their data platfo
     <span style="float:left;"><em>Data Engineer</em></span>
     <span style="float:right;"><em>February 2023 – July 2024</em></span><br>
 </p>
+
 - Designed and developed a centralized ingestion framework for a data migration project which is can be ran via CLI or scheduled Airflow runs, replacing manual processes of ad hoc scripts and queries
 - Developed dynamic compute allocation feature for the framework that automatically adjusts AWS and Snowflake settings based on the input data volume to save cloud compute costs
 - Established a previously near-nonexistent data quality, monitoring, and testing suite throughout the pipeline, eliminating duplicate data incidents and ruducing time spent on data quality issues each sprint
@@ -36,13 +33,14 @@ I am a part-time consultant for a cosmetology school, building their data platfo
     <span style="float:left;"><em>Data Engineer</em></span>
     <span style="float:right;"><em>August 2022 – January 2023</em></span><br>
 </p>
+
 - Reduced BigQuery computation costs by implementing query optimization best practices including partitioning, pre-aggregation, data filtering, caching frequently used queries
 
 <h2 style="margin-bottom: 0em;">PROJECT</h2>
 <hr style="margin-top: 0em; margin-bottom: 0.3em; border: 1px solid black;">
 
 <p><strong>koffee</strong> (<a href="https://github.com/andrewwkimm/koffee">Source Code</a>)</p>
-<ul style="margin-top: -10px;">
+<ul>
   <li>A lightweight video file translation tool built for myself and a K-pop and Anime Discord community</li>
 </ul>
 
@@ -51,7 +49,7 @@ I am a part-time consultant for a cosmetology school, building their data platfo
 
 - **Programming:** Python, SQL
 - **Databases:** Snowflake, BigQuery, PostgreSQL
-- **Technologies:** Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, Terraform
+- **Technologies:** Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, FastAPI, Terraform
 - **Interests:** Murder mysteries, Military history, Retro video games, Singing
 
 
