@@ -1,9 +1,7 @@
 <script>
-  // import ResumeContent from '$lib/content/resume.md';
-  import ResumeContent from '../../content/resume.md';
-
+  import Resume from '../../content/resume.md';
 </script>
 
-<div class="resume-container">
-  <svelte:component this={ResumeContent} />
+<div>
+  <svelte:component this={Resume} />
 </div>
