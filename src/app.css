@@ -103,6 +103,12 @@
     text-decoration: underline;
   }
 
+  /* Blog markdown rendering */
+
+  .blog p {
+    margin-bottom: 1rem;
+  }
+
   /* Lists */
   ul {
     list-style-type: disc;
