@@ -4,9 +4,12 @@
 
 <div>
   {#each data.posts as post}
-    <article>
-      <h2><a href="/blog/{post.slug}">{post.metadata.title}</a></h2>
-      <time>{post.metadata.date}</time>
+    <article class="mb-12">
+      <time class="block mb-1 text-gray-500">{post.metadata.date}</time>
+
+      <h2 class="text-3xl">
+        <a href="/blog/{post.slug}" class="hover:underline">{post.metadata.title}</a>
+      </h2>
     </article>
   {/each}
 </div>
