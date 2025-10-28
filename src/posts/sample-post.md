@@ -3,10 +3,14 @@ title: "Another Example Post"
 date: "2025-11-01"
 ---
 
-As we’re still in the early days of building applications with foundation models, it’s normal to make mistakes. This is a quick note with examples of some of the most common pitfalls that I’ve seen, both from public case studies and from my personal experience.
+I’m Andrew Kim, a New Yorker born and raised in Queens where I’ve spent most of my life. Shortly after I was born, I was sent to temporarily live with my uncle and grandmother in the suburbs of Daegu, South Korea before returning back to the states for elementary school.
 
-Because these pitfalls are common, if you’ve worked on any AI product, you’ve probably seen them before.
+I am best reached through email.
 
 ```bash
-make build
+git commit -av
+```
+
+```console
+npm run dev
 ```
