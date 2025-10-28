@@ -21,14 +21,18 @@
   ];
 
   const currentYear = new Date().getFullYear();
-  const bio = "I am a Korean-American Data Engineer based in New York City building data apps, platforms, and tooling.";
 </script>
 
-<footer class="mt-auto border-t border-border pt-[30px] pb-5 bg-bg">
+<footer
+  class="
+    border-t border-[var(--color-border)]
+    pt-[30px] pb-5 mt-auto
+    bg-[var(--color-bg)]
+  "
+>
   <div class="wrapper">
-    <!-- Social links and bio -->
-    <div class="grid grid-cols-1 md:grid-cols-[1fr_1.58fr] gap-10 mb-5">
-      <!-- Social links -->
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_1.58fr] gap-10 md:gap-10 mb-5">
+      <!-- Social Links -->
       <div>
         <ul class="list-none p-0">
           {#each socialLinks as { platform, url, username, icon }}
@@ -37,10 +41,14 @@
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-gray hover:text-text hover:no-underline flex items-center gap-2 transition-colors"
-                aria-label={platform}
+                class="
+                  text-[var(--color-gray)]
+                  flex items-center gap-2
+                  no-underline
+                  hover:text-[var(--color-text)] hover:no-underline
+                "
               >
-                <i class="{icon} w-[18px] text-center" aria-hidden="true"></i>
+                <i class="{icon} w-[18px] text-center"></i>
                 <span>{username}</span>
               </a>
             </li>
@@ -50,15 +58,15 @@
 
       <!-- Bio -->
       <div>
-        <p class="text-gray text-[17px] leading-normal">
-          {bio}
+        <p class="text-[var(--color-gray)] text-[17px] leading-normal">
+          I am a Korean-American Data Engineer based in New York City building data apps, platforms, and tooling.
         </p>
       </div>
     </div>
 
     <!-- Copyright -->
     <div class="text-center pb-5">
-      <p class="text-gray text-[15px]">
+      <p class="text-[var(--color-gray)] text-[15px]">
         © Andrew Kim {currentYear}
       </p>
     </div>
