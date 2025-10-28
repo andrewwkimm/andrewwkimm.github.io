@@ -6,7 +6,7 @@
 
 <Header />
 
-<main class="py-10 flex-1">
+<main class="py-10">
   <div class="wrapper">
     <slot />
   </div>

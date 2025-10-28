@@ -7,7 +7,7 @@
   ];
 </script>
 
-<header class="border-t-[5px] border-t-[var(--color-dark-gray)] border-b border-b-[var(--color-border)] min-h-[55.95px] leading-[60px]">
+<header class="border-t-[5px] border-t-[var(--color-dark-gray)] border-b border-b-[var(--color-border)] min-h-[55.95px] leading-[60px] flex-shrink-0">
   <div class="wrapper flex justify-between items-center">
     <a class="text-[31px] font-light tracking-tight text-[var(--color-dark-gray)] hover:no-underline" href="/">
       Andrew Kim
