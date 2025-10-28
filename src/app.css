@@ -1,86 +1,107 @@
 @import "tailwindcss";
 
-/* Reset and Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+@theme {
+  /* Typography */
+  --font-family-serif: "Lora", serif;
+  --font-size-base: 1.125rem; /* 18px */
+
+  /* Colors */
+  --color-text: #111;
+  --color-bg: #fdfdfd;
+  --color-link: #2a7ae2;
+  --color-gray: #828282;
+  --color-dark-gray: #424242;
+  --color-border: #e8e8e8;
 }
 
-html, body {
-  height: 100%;
-}
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  /* Universal reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-body {
-  font-family: "Lora", serif;
-  font-size: 18px;
-  line-height: 1.5;
-  color: #111;
-  background-color: #fdfdfd;
-  -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-}
+  /* Root elements */
+  html, body {
+    height: 100%;
+  }
 
-/* Minima's wrapper */
-.wrapper {
-  max-width: 800px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0px;
-  padding-left: 0px;
-}
+  body {
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+  }
 
-@media screen and (max-width: 800px) {
+  /* Layout container */
   .wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  /* Links */
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Lists */
+  ul {
+    list-style-type: disc;
+    padding-left: 2em;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 2em;
+  }
+
+  /* Images */
+  img {
     max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
-
-/* Page content area */
-.page-content {
-  padding: 40px 0;
-  flex: 1 0 auto;
-}
-
-/* Links */
-a {
-  color: #2a7ae2;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Markdown styles */
-ul {
-  list-style-type: disc;
-  padding-left: 2em;
-}
-
-ol {
-  list-style-type: decimal;
-  padding-left: 2em;
-}
-
-p {
-  margin: 1em 0;
-}
-
-div {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-h1 { font-size: 2em; font-weight: bold; }
-h2 { font-size: 1.5em; font-weight: bold; }
-h3 { font-size: 1.17em; font-weight: bold; }
-
-strong { font-weight: bold; }
-em { font-style: italic; }
