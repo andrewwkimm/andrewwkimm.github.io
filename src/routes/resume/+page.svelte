@@ -82,7 +82,11 @@
     location="New York, NY"
   >
     <li>
-      Analytics
+      I was the sole BI Engineer staffed to a Fortune 50 CPG client at Analytic
+      Partners, a marketing analytics consultancy where I primarily built ETL
+      pipelines and designeddata models that enabled self-service marketing analytics
+      in a team of 7 consultants, allowing the team to independently perform A/B
+      testing and analyze marketing spend without recurring engineering support.
     </li>
   </Entry>
 </Section>
@@ -117,7 +121,8 @@
     location="Brooklyn, NY"
   >
     <li>
-      Formerly a student at At The Table, a non-profit organization that provides academic and socio-emotional support for foster youth
+      Formerly a student at At The Table, a non-profit organization that provides
+      academic and socio-emotional support for foster youth
     </li>
   </Entry>
 </Section>
