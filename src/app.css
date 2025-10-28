@@ -93,6 +93,16 @@
     color: var(--color-link);
   }
 
+  .blog a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  .blog a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+  }
+
   /* Lists */
   ul {
     list-style-type: disc;
