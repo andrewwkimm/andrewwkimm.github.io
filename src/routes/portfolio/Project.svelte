@@ -9,7 +9,6 @@
   <div class="flex-1 md:pr-20">
     <p class="text-xl font-bold mb-2">{title}</p>
 
-    <!-- ✅ Correct way to render HTML -->
     <div
       class="text-base leading-relaxed text-[var(--color-text)]
              [&_a]:text-[var(--color-link)] [&_a:hover]:underline
