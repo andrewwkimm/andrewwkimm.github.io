@@ -12,9 +12,15 @@
   --color-text: #111;
   --color-bg: #fdfdfd;
   --color-link: #2a7ae2;
+  --color-link-hover: #1e5ba8;
   --color-gray: #828282;
   --color-dark-gray: #424242;
   --color-border: #e8e8e8;
+
+  /* Spacing */
+  --header-border-width: 5px;
+  --header-height: 60px;
+  --max-width: 800px;
 }
 
 /* ============================================
@@ -29,7 +35,7 @@
   }
 
   /* Root elements */
-  html, body {
+  html {
     height: 100%;
   }
 
@@ -42,15 +48,14 @@
     -webkit-font-smoothing: antialiased;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
   }
 
   /* Layout container */
   .wrapper {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: 0.5rem;
   }
 
   /* Typography */
@@ -79,12 +84,13 @@
 
   /* Links */
   a {
-    color: var(--color-link);
-    text-decoration: none;
+    color: var(--color-text);
+    text-decoration: underline;
+    transition: color 0.2s ease;
   }
 
   a:hover {
-    text-decoration: underline;
+    color: var(--color-link);
   }
 
   /* Lists */
@@ -103,5 +109,15 @@
     max-width: 100%;
     height: auto;
     display: block;
+  }
+}
+
+/* ============================================
+   COMPONENT UTILITIES
+   ============================================ */
+@layer components {
+  /* Prevent flex shrinking for fixed elements */
+  .flex-fixed {
+    flex-shrink: 0;
   }
 }
