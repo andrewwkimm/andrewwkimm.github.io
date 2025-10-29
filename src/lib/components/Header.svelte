@@ -13,16 +13,25 @@
     border-t-[var(--color-dark-gray)]
     border-b
     border-b-[var(--color-border)]
-    min-h-[55.95px] leading-[60px]
+    min-h-[55.95px]
+    leading-[60px]
     flex-shrink-0
   "
 >
-  <div class="wrapper flex justify-between items-center">
+  <div class="
+    wrapper
+    flex
+    justify-between
+    items-center
+  ">
     <a
       class="
-        text-[31px] font-light tracking-tight
+        text-[31px]
         text-[var(--color-gray)]
-        no-underline hover:underline
+        font-light
+        tracking-tight
+        no-underline
+        hover:underline
       "
       href="/"
     >
