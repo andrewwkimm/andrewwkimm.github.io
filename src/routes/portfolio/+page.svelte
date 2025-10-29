@@ -34,7 +34,7 @@
     many other partner non-profits and foster care advocacy organizations."
     links={[
       { text: 'GitHub', url: 'https://github.com/andrewwkimm/doe-high-school-scorecard/tree/nodejs-express' },
-      { text: 'Website', url: 'https://doe-high-school-scorecard.onrender.com/' }
+      { text: 'Demo', url: 'https://doe-high-school-scorecard.onrender.com/' }
     ]}
     imageSrc="/assets/images/at-the-table.webp"
   />
