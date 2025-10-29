@@ -2,7 +2,7 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - main
+      - [ main, jekyll-minima ]
   pull_request:
     branches:
       - main
