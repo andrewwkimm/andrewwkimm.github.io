@@ -7,54 +7,35 @@
   ];
 </script>
 
-<header class="site-header">
-  <div class="wrapper">
-    <a class="site-title" href="/">Andrew Kim</a>
+<header
+  class="
+    border-t-[5px] border-t-[var(--color-dark-gray)]
+    border-b border-b-[var(--color-border)]
+    min-h-[55.95px] leading-[60px]
+    flex-shrink-0
+  "
+>
+  <div class="wrapper flex justify-between items-center">
+    <a
+      class="
+        text-[31px] font-light tracking-tight
+        text-[var(--color-dark-gray)]
+        no-underline hover:underline
+      "
+      href="/"
+    >
+      Andrew Kim
+    </a>
 
-    <nav class="site-nav">
+    <nav class="space-x-[30px]">
       {#each navigation as item}
-        <a class="page-link" href={item.href}>{item.name}</a>
+        <a
+          class="text-[var(--color-text)] no-underline hover:underline"
+          href={item.href}
+        >
+          {item.name}
+        </a>
       {/each}
     </nav>
   </div>
 </header>
-
-<style>
-  .site-header {
-    border-top: 5px solid #424242;
-    border-bottom: 1px solid #e8e8e8;
-    min-height: 55.95px;
-    line-height: 60px;
-    position: relative;
-  }
-
-  .site-title {
-    font-size: 31px;
-    font-weight: 300;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-    color: #424242;
-  }
-
-  .site-title:hover {
-    text-decoration: none;
-  }
-
-  .site-nav {
-    float: right;
-    line-height: 60px;
-  }
-
-  .page-link {
-    color: #111;
-    line-height: 1.5;
-    margin-left: 30px;
-    font-size: 18px;
-  }
-
-  .page-link:hover {
-    text-decoration: none;
-    color: #111;
-  }
-</style>

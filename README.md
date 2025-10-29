@@ -1,38 +1,10 @@
-# sv
+## [andrewwkimm.github.io](https://andrewwkimm.github.io/)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is the repository with the source code for my personal website. It is built using [SvelteKit](https://kit.svelte.dev/) and [Tailwind CSS](https://tailwindcss.com/).
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+To run it locally:
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

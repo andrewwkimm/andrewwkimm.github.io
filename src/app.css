@@ -1,96 +1,158 @@
 @import "tailwindcss";
 
-/* Reset and Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+@theme {
+  /* Typography */
+  --font-family-serif: "Lora", serif;
+  --font-size-base: 1.125rem; /* 18px */
+
+  /* Colors */
+  --color-text: #111;
+  --color-bg: #fdfdfd;
+  --color-link: #2a7ae2;
+  --color-link-hover: #1e5ba8;
+  --color-gray: #828282;
+  --color-dark-gray: #424242;
+  --color-border: #e8e8e8;
+
+  /* Spacing */
+  --header-border-width: 5px;
+  --header-height: 60px;
+  --max-width: 810px;
 }
 
-html, body {
-  height: 100%;
-}
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  /* Universal reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-body {
-  font-family: "Lora", serif;
-  font-size: 18px;
-  line-height: 1.5;
-  color: #111;
-  background-color: #fdfdfd;
-  -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+  /* Root elements */
+  html {
+    height: 100%;
+  }
 
-/* Minima's wrapper */
-.wrapper {
-  max-width: 800px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0px;
-  padding-left: 0px;
-}
+  body {
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-@media screen and (max-width: 800px) {
+  /* Layout container */
   .wrapper {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: 0.5rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  /* Links */
+  a {
+    color: var(--color-text);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-link);
+  }
+
+  .blog a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  .blog a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+  }
+
+  /* Blog markdown rendering */
+
+  .blog p {
+    margin-bottom: 1rem;
+  }
+
+  /* Code syntax for blog posts */
+
+  pre code {
+    font-size: 1rem !important;
+  }
+
+  .blog pre.shiki.shiki {
+    /* background-color: #2d2d2d !important; */
+    padding: 1rem !important;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .blog pre.shiki code {
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  /* Lists */
+  ul {
+    list-style-type: disc;
+    padding-left: 2em;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 2em;
+  }
+
+  /* Images */
+  img {
     max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
-/* Page content area */
-.page-content {
-  padding: 40px 0;
-  flex: 1 0 auto;
+/* ============================================
+   COMPONENT UTILITIES
+   ============================================ */
+@layer components {
+  /* Prevent flex shrinking for fixed elements */
+  .flex-fixed {
+    flex-shrink: 0;
+  }
 }
-
-/* Homepage specific */
-.home {
-  margin-bottom: 30px;
-}
-
-.home p {
-  margin-bottom: 15px;
-}
-
-/* Links */
-a {
-  color: #2a7ae2;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Markdown styles */
-ul {
-  list-style-type: disc;
-  padding-left: 2em;
-}
-
-ol {
-  list-style-type: decimal;
-  padding-left: 2em;
-}
-
-p {
-  margin: 1em 0;
-}
-
-div {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-h1 { font-size: 2em; font-weight: bold; }
-h2 { font-size: 1.5em; font-weight: bold; }
-h3 { font-size: 1.17em; font-weight: bold; }
-
-strong { font-weight: bold; }
-em { font-style: italic; }

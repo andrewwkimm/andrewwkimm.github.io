@@ -6,7 +6,7 @@
 
 <Header />
 
-<main class="page-content" aria-label="Content">
+<main class="py-10">
   <div class="wrapper">
     <slot />
   </div>
