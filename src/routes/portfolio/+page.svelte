@@ -17,7 +17,7 @@
   <PortfolioItem
     title="At The Table"
     description="At The Table connects foster youth with educational resources. The executive director maintained multiple versions of a scorecard spreadsheet for partner organizations, a time-consuming process that took away from directly serving students. I developed a centralized web application that replaced the fragmented spreadsheet system with an intuitive interface accessible to non-technical audiences."
-
+    additionalInfo="This web app serves not only the staff and students in At The Table, but also <a href='https://fairfuturesny.org' target='_blank'>Fair Futures</a> and students in <a href='https://www.cuny.edu/about/administration/offices/student-affairs/programs-services/foster-youth-college-success-initiative-fycsi/' target='_blank'>CUNY’s Foster Youth College Success Initiative</a>, among many other non-profits and foster care advocacy organizations."
     links={[
       { text: 'GitHub', url: 'https://github.com/andrewwkimm/doe-high-school-scorecard/tree/nodejs-express' },
       { text: 'Website', url: 'https://doe-high-school-scorecard.onrender.com/' }
