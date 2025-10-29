@@ -109,6 +109,25 @@
     margin-bottom: 1rem;
   }
 
+  /* Code syntax for blog posts */
+
+  pre code {
+    font-size: 1rem !important;
+  }
+
+  .blog pre.shiki.shiki {
+    /* background-color: #2d2d2d !important; */
+    padding: 1rem !important;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .blog pre.shiki code {
+    background: none !important;
+    padding: 0 !important;
+  }
+
   /* Lists */
   ul {
     list-style-type: disc;
