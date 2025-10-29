@@ -5,7 +5,7 @@ on:
       - [ main, jekyll-minima ]
   pull_request:
     branches:
-      - main
+      - [ main, jekyll-minima ]
 jobs:
   build:
     name: "Test with Jekyll ${{ matrix.jekyll }}"
