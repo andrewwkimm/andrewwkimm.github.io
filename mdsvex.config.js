@@ -8,7 +8,7 @@ const config = {
     highlighter: async (code, lang = 'text') => {
       const html = await codeToHtml(code, {
         lang,
-        theme: 'github-dark'
+        theme: 'nord'
       });
       return `{@html \`${escapeSvelte(html)}\` }`;
     }
