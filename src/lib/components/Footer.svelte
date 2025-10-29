@@ -25,13 +25,20 @@
 
 <footer
   class="
-    border-t border-[var(--color-border)]
+    border-t
+    border-[var(--color-border)]
     pt-[30px] pb-5 mt-auto
     bg-[var(--color-bg)]
   "
 >
   <div class="wrapper">
-    <div class="grid grid-cols-1 md:grid-cols-[1fr_1.58fr] gap-10 md:gap-10 mb-5">
+    <div class="
+      grid
+      grid-cols-1
+      md:grid-cols-[1fr_1.58fr]
+      gap-10 md:gap-10
+      mb-5"
+    >
       <!-- Social Links -->
       <div>
         <ul class="list-none p-0">
@@ -58,7 +65,11 @@
 
       <!-- Bio -->
       <div>
-        <p class="text-[var(--color-gray)] text-[17px] leading-normal">
+        <p class="
+          text-[var(--color-gray)]
+          text-[17px]
+          leading-normal
+        ">
           I am a Korean-American Data Engineer based in New York City building data apps, platforms, and tooling.
         </p>
       </div>
@@ -66,7 +77,10 @@
 
     <!-- Copyright -->
     <div class="text-center pb-5">
-      <p class="text-[var(--color-gray)] text-[15px]">
+      <p class="
+        text-[var(--color-gray)]
+        text-[15px]
+      ">
         © Andrew Kim {currentYear}
       </p>
     </div>
