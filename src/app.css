@@ -129,13 +129,13 @@
 
   /* Inline code styling (not in code blocks) */
   :not(pre) > code {
-    background-color: #282c34;
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-family: 'Fira Code', monospace;
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Menlo', monospace;
     font-size: 0.9em;
-    color: #61afef;
-    border: 1px solid #3e4451;
+    color: #666;
+    border: 1px solid #ddd;
   }
 
   /* Lists */
