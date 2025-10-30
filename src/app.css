@@ -113,19 +113,29 @@
 
   pre code {
     font-size: 1rem !important;
+    background: none !important;
+    padding: 0 !important;
+    border: none !important;
+    color: inherit !important;
   }
 
   .blog pre.shiki.shiki {
-    /* background-color: #2d2d2d !important; */
     padding: 1rem !important;
     border-radius: 0.5rem;
     overflow-x: auto;
     margin-bottom: 1rem;
     line-height: 1.2;
   }
-  .blog pre.shiki code {
-    background: none !important;
-    padding: 0 !important;
+
+  /* Inline code styling (not in code blocks) */
+  :not(pre) > code {
+    background-color: #282c34;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    color: #61afef;
+    border: 1px solid #3e4451;
   }
 
   /* Lists */

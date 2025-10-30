@@ -15,7 +15,7 @@
     </h3>
 
     <p class="mb-4">
-      {description}
+      {@html description}
     </p>
 
     {#if additionalInfo}

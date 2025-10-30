@@ -71,7 +71,7 @@
   <PortfolioItem
     title="LlamaIndex"
     description="I added support for pathlib objects to one of the most commonly used
-    modules in LlamaIndex, the <code>SimpleDirectoryReader</code>, after I noticed it
+    data loading modules in LlamaIndex, the <code>SimpleDirectoryReader</code>, after I noticed it
     only accepted string paths."
     links={[
       { text: 'Pull Request', url: 'https://github.com/run-llama/llama_index/pull/16108' },
