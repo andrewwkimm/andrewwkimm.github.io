@@ -99,17 +99,13 @@
 </Section>
 
 <Section name="EDUCATION">
-  <div class="mb-4">
-    <div class="flex justify-between">
-      <strong>Baruch College</strong>
-      <strong><span>Gramercy Park, NY</span></strong>
-    </div>
-    <div class="flex justify-between">
-      <span><em>B.A. Mathematics, Minor in Computer Science</em></span>
-      <span><em>Graduated January 2021</em></span>
-  </div>
-</div>
-
+  <Entry
+    title="B.A. Mathematics, Minor in Computer Science"
+    organization="Baruch College"
+    url="https://www.baruch.cuny.edu/"
+    dates="Graduated January 2021"
+    location="Gramercy Park, NY"
+  />
 </Section>
 
 <Section name="MISCELLANEOUS">

@@ -1,7 +1,7 @@
 <script lang="ts">
   export let title: string;
   export let organization: string;
-  export let url: string;
+  export let url: string = '';
   export let dates: string;
   export let location: string;
 </script>
@@ -9,7 +9,12 @@
 <div class="mt-4 mb-4">
   <!-- Title / Organization -->
   <h3 class="text-black text-lg leading-tight mb-1">
-    {title} at <a class="link" href={url}>{organization}</a>
+    {title} at
+    {#if url}
+      <a class="link" href={url}>{organization}</a>
+    {:else}
+      {organization}
+    {/if}
   </h3>
 
   <!-- Dates and Location -->
