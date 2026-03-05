@@ -24,6 +24,8 @@ jobs:
       - name: build
         run: |
           npm run build
+        env:
+          GA_MEASUREMENT_ID: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
