@@ -5,7 +5,7 @@
     username: string;
     icon: string;
   };
-  const socialLinks: SocialLink = [
+  const socialLinks: SocialLink[] = [
     {
       platform: 'Email',
       url: 'mailto:andrewkimka@gmail.com',
@@ -57,10 +57,10 @@
       <!-- Social Links -->
       <div>
         <ul class="list-none p-0">
-          {#each socialLinks as { icon, platform, url, username } (url)}
+          {#each socialLinks as link (link.url)}
             <li>
               <a
-                href={url}
+                href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="
@@ -70,8 +70,8 @@
                   hover:text-[var(--color-text)] hover:no-underline
                 "
               >
-                <i class="{icon} w-[18px] text-center"></i>
-                <span>{platform}</span>
+                <i class="{link.icon} w-[18px] text-center"></i>
+                <span>{link.platform}</span>
               </a>
             </li>
           {/each}
