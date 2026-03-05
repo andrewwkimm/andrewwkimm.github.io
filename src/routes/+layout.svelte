@@ -6,7 +6,7 @@
   import Footer from '$lib/components/Footer.svelte';
   import '../app.css';
 
-  const GA_MEASUREMENT_ID = 'G-HQYDFZ9L6R';
+  const GA_MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
 
   const isProduction = import.meta.env.PROD;
 
