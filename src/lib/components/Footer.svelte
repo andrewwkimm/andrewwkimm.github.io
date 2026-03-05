@@ -23,6 +23,12 @@
       url: 'https://www.linkedin.com/in/andrewwkimm/',
       username: 'andrewwkimm',
       icon: 'fa-brands fa-linkedin'
+    },
+    {
+      platform: 'Discord',
+      url: 'https://discord.com/users/1156466317705084948',
+      username: 'andrewwkimm',
+      icon: 'fa-brands fa-discord'
     }
   ];
 
