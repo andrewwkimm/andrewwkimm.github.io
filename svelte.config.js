@@ -11,8 +11,12 @@ const config = {
   ],
 
   kit: {
-    adapter: adapter(),
-  },
+    adapter: adapter({
+      pages: 'build',
+      assets: 'build',
+      fallback: undefined
+    }),
+  }
 };
 
 export default config;
