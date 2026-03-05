@@ -24,6 +24,7 @@ jobs:
       - name: Build
         run: |
           npm run build
+          npx eslint src/
         env:
           GA_MEASUREMENT_ID: ${{ secrets.VITE_GA_MEASUREMENT_ID }}
 

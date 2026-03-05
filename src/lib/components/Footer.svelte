@@ -5,7 +5,7 @@
     username: string;
     icon: string;
   };
-  const socialLinks = [
+  const socialLinks: SocialLink = [
     {
       platform: 'Email',
       url: 'mailto:andrewkimka@gmail.com',
@@ -57,7 +57,7 @@
       <!-- Social Links -->
       <div>
         <ul class="list-none p-0">
-          {#each socialLinks as { platform, url, username, icon }}
+          {#each socialLinks as { url, username, icon } (url)}
             <li>
               <a
                 href={url}

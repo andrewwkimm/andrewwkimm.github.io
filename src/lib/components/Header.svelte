@@ -39,7 +39,7 @@
     </a>
 
     <nav class="space-x-[30px]">
-      {#each navigation as item}
+      {#each navigation as item (item.href)}
         <a
           class="
             text-[19px]

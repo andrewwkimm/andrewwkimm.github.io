@@ -18,7 +18,7 @@
 
     <p class="font-bold">
       Links:
-      {#each links as link, i}
+      {#each links as link, i (link.url)}
         <a href={link.url} target="_blank" rel="noopener noreferrer">{link.text}</a>{#if i < links.length - 1}&nbsp;|&nbsp;{/if}
       {/each}
     </p>
