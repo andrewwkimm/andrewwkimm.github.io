@@ -61,7 +61,7 @@ class GoogleAnalytics {
     if (typeof window === 'undefined') return;
 
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(arguments);
+    window.dataLayer.push([command, ...args]);
   }
 }
 
