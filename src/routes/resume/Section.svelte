@@ -2,7 +2,7 @@
   export let name: string;
 </script>
 
-<div class="mb-8">
+<div class="mb-6">
   <!-- Section heading: larger font to match default h2 -->
   <h2 class="text-2xl font-bold leading-tight m-0">{name}</h2>
 
