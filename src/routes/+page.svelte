@@ -1,3 +1,8 @@
+<script lang="ts">
+  import type { PageData } from './$types';
+  export let data: PageData;
+</script>
+
 <div class="space-y-4">
   <p>
     I'm Andrew Kim, a New Yorker born and raised in Queens where I've spent most of my life.
