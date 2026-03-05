@@ -11,7 +11,6 @@ class GoogleAnalytics {
     this.config = { measurementId, enabled };
 
     if (!enabled) {
-      console.log('[Analytics] Disabled in current environment');
       return;
     }
 
