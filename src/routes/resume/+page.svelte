@@ -5,6 +5,19 @@
 
 <Section name="PROFESSIONAL EXPERIENCE">
   <Entry
+    title="Data Engineer"
+    organization="Ovative Group"
+    url="https://ovative.com/"
+    dates="February 2026 – Present"
+    location="New York, NY"
+  >
+    <li>
+      Building and maintaining various internal tooling for other engineers
+      and data pipelines for clients.
+    </li>
+  </Entry>
+
+  <Entry
     title="Data Engineering Consultant"
     organization="American Beauty Institute"
     url="https://beautyinstitute.us/"
@@ -57,36 +70,6 @@
       Owned the documentation for the ingestion framework, data quality and validations,
       and unit and integration testing; guided other engineers and analysts on best
       practices and onboarded new members
-    </li>
-  </Entry>
-
-  <Entry
-    title="Data Engineer"
-    organization="Hero Digital"
-    url="https://www.linkedin.com/company/herodigitalhq/"
-    dates="August 2022 – January 2023"
-    location="New York, NY"
-  >
-    <li>
-      Reduced BigQuery computation costs by implementing query optimization best
-      practices including partitioning, pre-aggregation, data filtering, caching
-      frequently used queries
-    </li>
-  </Entry>
-
-  <Entry
-    title="Business Intelligence Engineer"
-    organization="Analytic Partners"
-    url="https://analyticpartners.com/"
-    dates="September 2021 – August 2022"
-    location="New York, NY"
-  >
-    <li>
-      I was the sole BI Engineer staffed to a Fortune 50 CPG client at Analytic
-      Partners, a marketing analytics consultancy where I primarily built ETL
-      pipelines and designeddata models that enabled self-service marketing analytics
-      in a team of 7 consultants, allowing the team to independently perform A/B
-      testing and analyze marketing spend without recurring engineering support.
     </li>
   </Entry>
 </Section>
