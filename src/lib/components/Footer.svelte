@@ -1,4 +1,10 @@
 <script lang="ts">
+  type SocialLink = {
+    platform: string;
+    url: string;
+    username: string;
+    icon: string;
+  };
   const socialLinks = [
     {
       platform: 'Email',
