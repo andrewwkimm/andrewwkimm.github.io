@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   const socialLinks = [
     {
       platform: 'Email',

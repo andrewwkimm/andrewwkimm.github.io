@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   const navigation = [
     { name: 'Blog', href: '/blog' },
     { name: 'Resume', href: '/resume' },
