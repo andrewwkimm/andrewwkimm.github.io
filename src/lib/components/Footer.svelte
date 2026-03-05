@@ -57,7 +57,7 @@
       <!-- Social Links -->
       <div>
         <ul class="list-none p-0">
-          {#each socialLinks as { url, username, icon } (url)}
+          {#each socialLinks as { icon, platform, url, username } (url)}
             <li>
               <a
                 href={url}
@@ -71,7 +71,7 @@
                 "
               >
                 <i class="{icon} w-[18px] text-center"></i>
-                <span>{username}</span>
+                <span>{platform}</span>
               </a>
             </li>
           {/each}
