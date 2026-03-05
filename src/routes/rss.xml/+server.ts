@@ -1,4 +1,4 @@
-import type { RequestHandler } from '../$types';
+import type { RequestHandler } from './$types';
 import type { Post } from '$lib/types';
 
 export const prerender = true;
