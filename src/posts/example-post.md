@@ -1,6 +1,7 @@
 ---
 title: "My Example Post"
 date: "2025-01-01"
+tags: ["tech", "data"]
 ---
 
 Some text.
