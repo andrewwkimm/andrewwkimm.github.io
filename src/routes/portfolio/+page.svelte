@@ -1,10 +1,10 @@
 <script lang="ts">
-  import PortfolioSection from './PortfolioSection.svelte';
-  import PortfolioItem from './PortfolioItem.svelte';
+  import Section from './Section.svelte';
+  import Entry from './Entry.svelte';
 </script>
 
-<PortfolioSection title="Consulting">
-  <PortfolioItem
+<Section title="Consulting">
+  <Entry
     title="American Beauty Institute"
     description="I am a Data Engineering Consultant for American Beauty Institute, a
     cosmetology school that offers certification education for various
@@ -17,7 +17,7 @@
     imageSrc="/assets/images/american-beauty-institute.png"
   />
 
-  <PortfolioItem
+  <Entry
     title="At The Table"
     description="At The Table connects foster youth with educational resources. The
     executive director maintained multiple versions of a scorecard spreadsheet
@@ -38,10 +38,10 @@
     ]}
     imageSrc="/assets/images/at-the-table.webp"
   />
-</PortfolioSection>
+</Section>
 
-<PortfolioSection title="Projects">
-  <PortfolioItem
+<Section title="Projects">
+  <Entry
     title="koffee"
     description="koffee is a lightweight CLI tool that translates a given video file to
     the target language, outputting a translated file with the subtitles
@@ -54,7 +54,7 @@
     imageSrc="/assets/images/koffee.png"
   />
 
-  <PortfolioItem
+  <Entry
     title="RAWG Video Game Data Pipeline"
     description="I built this data pipeline as I was getting into the Data Engineering
     space to playtest various tools I found interesting, but to also pique my
@@ -65,10 +65,10 @@
     ]}
     imageSrc="/assets/images/rawg.png"
   />
-</PortfolioSection>
+</Section>
 
-<PortfolioSection title="Open Source Contributions">
-  <PortfolioItem
+<Section title="Open Source Contributions">
+  <Entry
     title="LlamaIndex"
     description="I added support for pathlib objects to one of the most commonly used
     data loading modules in LlamaIndex, the <code>SimpleDirectoryReader</code>, after I noticed it
@@ -79,4 +79,4 @@
     ]}
     imageSrc="/assets/images/llama-index.jpeg"
   />
-</PortfolioSection>
+</Section>
