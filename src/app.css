@@ -7,6 +7,7 @@
   /* Typography */
   --font-family-serif: "Lora", serif;
   --font-size-base: 1.125rem; /* 18px */
+  --font-size-nav: 1.25rem; /* 20px */
 
   /* Colors — text */
   --color-text: #111;

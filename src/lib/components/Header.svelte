@@ -26,7 +26,7 @@
   ">
     <a
       class="
-        text-[31px]
+        text-[32px]
         text-[var(--color-gray)]
         font-light
         tracking-tight
@@ -42,6 +42,7 @@
       {#each navigation as item}
         <a
           class="
+            text-[19px]
             text-[var(--color-gray)]
             no-underline hover:underline
           "
