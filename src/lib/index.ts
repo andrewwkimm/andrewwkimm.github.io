@@ -1,3 +1,1 @@
-// place files you want to import through the `$lib` alias in this folder.
-
-export { getPosts } from './posts';
+export { getPosts } from './posts';S

@@ -1,8 +1,3 @@
-<script lang="ts">
-  import type { PageData } from './$types';
-  export let data: PageData;
-</script>
-
 <div class="blog">
   {#each data.posts as post}
     <article class="mb-12">
