@@ -31,6 +31,7 @@
     time-consuming process that took away from directly serving students. I developed a
     centralized web application that replaced the fragmented spreadsheet system with an
     intuitive interface accessible to non-technical audiences.</p>
+
     <p>This web app serves not only the staff and students in At The Table, but also
     <a href="https://fairfuturesny.org" target="_blank">Fair Futures</a> and students in
     <a href="https://www.cuny.edu/about/administration/offices/student-affairs/programs-services/foster-youth-college-success-initiative-fycsi/" target="_blank">CUNY's Foster Youth College Success Initiative</a>,
@@ -46,8 +47,24 @@
   >
     <p>koffee is a lightweight CLI tool that translates a given video file to the target
     language, outputting a translated file with the subtitles embedded into it.</p>
+
     <p>It was developed for myself and friends at a Discord community where there are many
     fans of K-pop and Anime, serving dozens of users weekly.</p>
+  </Entry>
+
+  <Entry
+    title="Qubeley"
+    links={[{ text: 'GitHub', url: 'https://github.com/andrewwkimm/qubeley' }]}
+    imageSrc="/assets/images/qubeley.png"
+  >
+    <p>Qubeley is a real-time systems metrics pipeline that continuously collects
+    CPU, memory, temperature, and log data from a host machine and stores it in a
+    queryable time-series database.</p>
+
+    <p>Unlike built-in system monitors that only show
+    the current moment, Qubeley retains historical data so you can query, visualise,
+    and analyse trends over time. It is designed to be self-hosted, lightweight,
+    and easy to run locally with no external dependencies beyond Docker and Go.</p>
   </Entry>
 
   <Entry
