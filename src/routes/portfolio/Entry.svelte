@@ -12,7 +12,7 @@
       {title}
     </h3>
 
-    <div class="mb-4">
+    <div class="mb-4 space-y-3">
       <slot />
     </div>
 
