@@ -59,12 +59,12 @@
   >
     <p>Qubeley is a real-time systems metrics pipeline that continuously collects
     CPU, memory, temperature, and log data from a host machine and stores it in a
-    queryable time-series database.</p>
+    queryable time-series database, written purely in Go.</p>
 
-    <p>Unlike built-in system monitors that only show
-    the current moment, Qubeley retains historical data so you can query, visualise,
-    and analyse trends over time. It is designed to be self-hosted, lightweight,
-    and easy to run locally with no external dependencies beyond Docker and Go.</p>
+    <p>Unlike built-in system monitors that only show the current moment, Qubeley
+    retains historical data so you can query, visualise, and analyse trends over
+    time. It is designed to be self-hosted, lightweight, and easy to run locally
+    with no external dependencies beyond Docker and Go.</p>
   </Entry>
 
   <Entry
