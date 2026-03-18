@@ -81,6 +81,25 @@
 
 <Section title="Open Source Contributions">
   <Entry
+    title="Dagster"
+    links={[
+      { text: 'Pull Request', url: 'https://github.com/dagster-io/dagster/pull/33544' },
+      { text: 'Issue', url: 'https://github.com/dagster-io/dagster/issues/6238' }
+    ]}
+    imageSrc="/assets/images/dagster.svg"
+  >
+    <p>I resolved a long-standing issue where dynamically mapped Dagster steps failed to
+    load ML models from S3, originally reported by a user who noticed Dagster's dynamic
+    step names contain square brackets which S3 accepts, but Spark interprets as glob
+    wildcards, making files unreadable despite being present in storage.</p>
+
+    <p>My fix finally automated path sanitization for dynamic mapping, unblocking anyone
+    persisting ML models or serialized objects to S3 and removing the need for users
+    to build their own workarounds.</p>
+
+  </Entry>
+
+  <Entry
     title="LlamaIndex"
     links={[
       { text: 'Pull Request', url: 'https://github.com/run-llama/llama_index/pull/16108' },
