@@ -13,7 +13,7 @@
   >
     <li>
       Building and maintaining various internal tooling for other engineers
-      and data pipelines for clients.
+      and data pipelines for clients
     </li>
   </Entry>
 
@@ -27,7 +27,7 @@
     <li>
       I am a part-time consultant at American Beauty Institute, a cosmetology school
       where I am building an end-to-end data platform on Google Cloud Platform,
-      integrating their digital marketing, payments, and operations data into BigQuery.
+      integrating their digital marketing, payments, and operations data into BigQuery
     </li>
     <li>
       <strong>Links:</strong>
