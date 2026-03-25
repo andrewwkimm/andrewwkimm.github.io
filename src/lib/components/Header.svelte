@@ -1,7 +1,7 @@
 <script lang="ts">
   const navigation = [
     { name: 'Blog', href: '/blog' },
-    { name: 'Resume', href: '/resume' },
+    // { name: 'Resume', href: '/resume' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Reading List', href: '/reading_list' }
   ];
