@@ -85,7 +85,7 @@
           text-[17px]
           leading-normal
         ">
-          I am a Korean-American Data Engineer based in New York City building data apps, platforms, and tooling.
+          I am a Korean-American Software Engineer based in New York City building data apps, platforms, and tooling.
         </p>
       </div>
     </div>
