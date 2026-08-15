@@ -31,10 +31,10 @@
     </li>
     <li>
       <strong>Links:</strong>
-      <a class="link" href="https://americanbeautyinstitute.readthedocs.io/" target="_blank" rel="noopener noreferrer">
+      <a href="https://americanbeautyinstitute.readthedocs.io/" target="_blank" rel="noopener noreferrer">
         Documentation
       </a>,
-      <a class="link" href="https://github.com/AmericanBeautyInstitute/data-platform" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/AmericanBeautyInstitute/data-platform" target="_blank" rel="noopener noreferrer">
         Source Code
       </a>
     </li>
@@ -75,10 +75,10 @@
 </Section>
 
 <Section name="SKILLS & INTERESTS">
-  <p class="mb-0"><strong>Programming:</strong> Python, SQL</p>
-  <p class="mb-0"><strong>Databases:</strong> Snowflake, BigQuery, PostgreSQL</p>
-  <p class="mb-0"><strong>Technologies:</strong> Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, FastAPI, Terraform</p>
-  <p class="mb-0"><strong>Interests:</strong> Murder mysteries, Military history, Retro video games, Singing</p>
+  <p class="resume-line"><strong>Programming:</strong> Python, SQL</p>
+  <p class="resume-line"><strong>Databases:</strong> Snowflake, BigQuery, PostgreSQL</p>
+  <p class="resume-line"><strong>Technologies:</strong> Airflow, AWS, GCP, dbt, Docker, GitHub Actions, PySpark, Prefect, FastAPI, Terraform</p>
+  <p class="resume-line"><strong>Interests:</strong> Murder mysteries, Military history, Retro video games, Singing</p>
 </Section>
 
 <Section name="EDUCATION">
@@ -105,3 +105,4 @@
     </li>
   </Entry>
 </Section>
+

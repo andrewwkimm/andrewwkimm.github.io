@@ -1,31 +1,40 @@
 <script lang="ts">
-  export let title: string;
-  export let organization: string;
-  export let url: string = '';
-  export let dates: string;
-  export let location: string;
+  let {
+    title,
+    organization,
+    url = '',
+    dates,
+    location,
+    children
+  }: {
+    title: string;
+    organization: string;
+    url?: string;
+    dates: string;
+    location: string;
+    children?: import('svelte').Snippet;
+  } = $props();
 </script>
 
-<div class="mt-4 mb-4">
-  <!-- Title / Organization -->
-  <h3 class="text-black text-lg leading-tight mb-1">
+<div class="resume-entry">
+  <h3>
     {title} at
     {#if url}
-      <a class="link" href={url}>{organization}</a>
+      <a href={url} target="_blank" rel="noopener noreferrer">{organization}</a>
     {:else}
       {organization}
     {/if}
   </h3>
 
-  <!-- Dates and Location -->
-  <p class="font-light mb-2">
-    <span class="whitespace-nowrap">{dates}</span>
-    <span class="px-0.5 text-neutral-500">•</span>
-    <span class="whitespace-nowrap">{location}</span>
+  <p class="post-meta">
+    <span class="nowrap">{dates}</span><span class="bar">|</span><span class="nowrap"
+      >{location}</span
+    >
   </p>
 
-  <!-- Description -->
-  <ul class="list-disc pl-7 marker:text-neutral-400 space-y-1">
-    <slot />
-  </ul>
+  {#if children}
+    <ul class="resume-points">
+      {@render children()}
+    </ul>
+  {/if}
 </div>

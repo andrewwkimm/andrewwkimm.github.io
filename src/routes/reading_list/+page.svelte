@@ -1,86 +1,102 @@
+<script lang="ts">
+  type Book = { title: string; author: string };
 
-<h2>Books I've enjoyed or planning to read</h2>
+  const books: Book[] = [
+    { title: '40 Puzzles and Problems in Probability and Mathematical Statistics', author: 'Wolfgang Schwarz' },
+    { title: 'A Death in Tokyo', author: 'Keigo Higashino' },
+    { title: 'A Farewell to Alms', author: 'Gregory Clark' },
+    { title: 'A Midsummer\'s Equation', author: 'Keigo Higashino' },
+    { title: 'A Pattern Language: Towns, Buildings, Construction', author: 'Christopher Alexander' },
+    { title: 'A Practical Guide To Quantitative Finance Interviews', author: 'Xinfeng Zhou' },
+    { title: 'A Quiet Place', author: 'Matsumoto Seicho' },
+    { title: 'Academically Adrift: Limited Learning on College Campuses', author: 'Richard Arum, Josipa Roksa' },
+    { title: 'All She Was Worth', author: 'Miyuki Miyabe' },
+    { title: 'And Then There Were None', author: 'Agatha Christie' },
+    { title: 'Angela\'s Ashes: A Memoir', author: 'Frank McCourt' },
+    { title: 'Anna Karenina', author: 'Leo Tolstoy' },
+    { title: 'Bargaining for Advantage', author: 'G. Richard Shell' },
+    { title: 'Cod: A Biography of the Fish that Changed the World', author: 'Mark Kurlansky' },
+    { title: 'Confessions', author: 'Kanae Minato' },
+    { title: 'Crime and Punishment', author: 'Fyodor Dostoevsky' },
+    { title: 'Death in the House of Rain', author: 'Szu-Yen Lin' },
+    { title: 'Don\'t Make Me Think', author: 'Steve Krug' },
+    { title: 'Endless Night', author: 'Agatha Christie' },
+    { title: 'Foreign Affairs', author: 'Alison Lurie' },
+    { title: 'George Marshall: Defender of the Republic', author: '' },
+    { title: 'Good-Bye to All That: An Autobiography', author: 'Robert Graves' },
+    { title: 'Grotesque', author: 'Natsuo Kirino' },
+    { title: 'How Computers Really Work: A Hands-On Guide to the Inner Workings of the Machine', author: 'Matthew Justice' },
+    { title: 'How to Prove It', author: 'Daniel J. Velleman' },
+    { title: 'How to Solve It', author: 'George Pólya' },
+    { title: 'How to Write Science Fiction and Fantasy', author: 'Orson Scott Card' },
+    { title: 'In the Miso Soup', author: 'Ryu Murakami' },
+    { title: 'Introduction to the Theory of Econometrics', author: 'Jan Magnus' },
+    { title: 'Journey Under the Midnight Sun', author: 'Keigo Higashino' },
+    { title: 'Lolita', author: 'Vladimir Nabokov' },
+    { title: 'Magpie Murders', author: 'Anthony Horowitz' },
+    { title: 'Malice', author: 'Keigo Higashino' },
+    { title: 'Meditations', author: 'Marcus Aurelius' },
+    { title: 'Murder in the Crooked House', author: 'Soji Shimada' },
+    { title: 'Murder of Roger Ackroyd', author: 'Agatha Christie' },
+    { title: 'My Life as a Quant: Reflections on Physics and Finance', author: 'Emmanuel Derman' },
+    { title: 'Naoko', author: 'Keigo Higashino' },
+    { title: 'Newcomer: A Story of Destined Tokyo', author: 'Keigo Higashino' },
+    { title: 'Numerical Matrix Analysis', author: 'Ilse Ipsen' },
+    { title: 'On War', author: 'Carl von Clausewitz' },
+    { title: 'On Writing Well', author: 'William Zinsser' },
+    { title: 'Out', author: 'Natsuo Kirino' },
+    { title: 'Penance', author: 'Kanae Minato' },
+    { title: 'Points and Lines', author: 'Seicho Matsumoto' },
+    { title: 'Problems and Snapshots from the World of Probability', author: 'Dennis Sandell, Gunnar Blom, and Lars Holst' },
+    { title: 'Real World', author: 'Natsuo Kirino' },
+    { title: 'Salvation of a Saint', author: 'Keigo Higashino' },
+    { title: 'Sherlock Holmes: The Hound of the Baskervilles, A Study in Scarlet, The Valley of Fear, The Sign of Four', author: 'Arthur Conan Doyle' },
+    { title: 'Shoe Dog', author: 'Phil Knight' },
+    { title: 'Silent Parade: A Detective Galileo Novel', author: 'Keigo Higashino' },
+    { title: 'Snow Country', author: 'Yasunari Kawabata' },
+    { title: 'Survival of the Prettiest: The Science of Beauty', author: 'Nancy Etcoff' },
+    { title: 'The Book of Evidence', author: 'John Banville' },
+    { title: 'The Concepts and Practice of Mathematical Finance', author: 'Mark S. Joshi' },
+    { title: 'The Decagon House Murders', author: 'Yukito Ayatsuji' },
+    { title: 'The Devotion of Suspect X', author: 'Keigo Higashino' },
+    { title: 'The Edogawa Rampo Reader', author: 'Edogawa Rampo' },
+    { title: 'The Final Curtain', author: 'Keigo Higashino' },
+    { title: 'The Goddess Chronicle', author: 'Natsuo Kirino' },
+    { title: 'The Groves of Academe', author: 'Mary McCarthy' },
+    { title: 'The Hollow Man', author: 'John Dickson Carr' },
+    { title: 'The Honjin Murders', author: 'Seishi Yokomizo' },
+    { title: 'The Inner Game of Tennis', author: 'W. Timothy Gallwey' },
+    { title: 'The Lady Killer', author: 'Masako Togawa' },
+    { title: 'The Lean Startup', author: 'Eric Ries' },
+    { title: 'The Likeness', author: 'Tana French' },
+    { title: 'The Little Book of Common Sense Investing: The Only Way to Guarantee Your Fair Share of Stock Market Returns', author: 'John C. Bogle' },
+    { title: 'The Master Key', author: 'Masako Togawa' },
+    { title: 'The Mill House Murders', author: 'Yukito Ayatsuji' },
+    { title: 'The Miracles of the Namiya General Store', author: 'Keigo Higashino' },
+    { title: 'The Murder of Roger Ackroyd', author: 'Agatha Christie' },
+    { title: 'The Mystery of the Yellow Room', author: 'Gaston Leroux' },
+    { title: 'The Name of the Game is a Kidnapping', author: 'Keigo Higashino' },
+    { title: 'The Shadow University: The Betrayal Of Liberty On America\'s Campuses', author: 'Alan Charles Kors and Harvey Silverglate' },
+    { title: 'The Splendid and the Vile: A Saga of Churchill, Family, and Defiance During the Blitz', author: '' },
+    { title: 'The Tattoo Murder Case', author: 'Akimitsu Takagi' },
+    { title: 'The Tokyo Zodiac Murders', author: 'Soji Shimada' },
+    { title: 'The Wit and Wisdom of Charles T. Munger', author: 'Charlie Munger' },
+  ];
+</script>
 
-<br>
+<h1 class="sr-only">Reading List</h1>
 
-<ul class="list-disc pl-7 marker:text-neutral-400 space-y-1">
-  <li><strong>40 Puzzles and Problems in Probability and Mathematical Statistics</strong> (Wolfgang Schwarz)</li>
-  <li><strong>A Death in Tokyo</strong> (Keigo Higashino)</li>
-  <li><strong>A Farewell to Alms</strong> (Gregory Clark)</li>
-  <li><strong>A Midsummer's Equation</strong> (Keigo Higashino)</li>
-  <li><strong>A Pattern Language: Towns, Buildings, Construction</strong> (Christopher Alexander)</li>
-  <li><strong>A Practical Guide To Quantitative Finance Interviews</strong> (Xinfeng Zhou)</li>
-  <li><strong>A Quiet Place</strong> (Matsumoto Seicho)</li>
-  <li><strong>Academically Adrift: Limited Learning on College Campuses</strong> (Richard Arum, Josipa Roksa)</li>
-  <li><strong>All She Was Worth</strong> (Miyuki Miyabe)</li>
-  <li><strong>And Then There Were None</strong> (Agatha Christie)</li>
-  <li><strong>Angela's Ashes: A Memoir</strong> (Frank McCourt)</li>
-  <li><strong>Anna Karenina</strong> (Leo Tolstoy)</li>
-  <li><strong>Bargaining for Advantage</strong> (G. Richard Shell)</li>
-  <li><strong>Cod: A Biography of the Fish that Changed the World</strong> (Mark Kurlansky)</li>
-  <li><strong>Confessions</strong> (Kanae Minato)</li>
-  <li><strong>Crime and Punishment</strong> (Fyodor Dostoevsky)</li>
-  <li><strong>Death in the House of Rain</strong> (Szu-Yen Lin)</li>
-  <li><strong>Don't Make Me Think</strong> (Steve Krug)</li>
-  <li><strong>Endless Night</strong> (Agatha Christie)</li>
-  <li><strong>Foreign Affairs</strong> (Alison Lurie)</li>
-  <li><strong>George Marshall: Defender of the Republic</strong></li>
-  <li><strong>Good-Bye to All That: An Autobiography</strong> (Robert Graves)</li>
-  <li><strong>Grotesque</strong> (Natsuo Kirino)</li>
-  <li><strong>How Computers Really Work: A Hands-On Guide to the Inner Workings of the Machine</strong> (Matthew Justice)</li>
-  <li><strong>How to Prove It</strong> (Daniel J. Velleman)</li>
-  <li><strong>How to Solve It</strong> (George Pólya)</li>
-  <li><strong>How to Write Science Fiction and Fantasy</strong> (Orson Scott Card)</li>
-  <li><strong>In the Miso Soup</strong> (Ryu Murakami)</li>
-  <li><strong>Introduction to the Theory of Econometrics</strong> (Jan Magnus)</li>
-  <li><strong>Journey Under the Midnight Sun</strong> (Keigo Higashino)</li>
-  <li><strong>Lolita</strong> (Vladimir Nabokov)</li>
-  <li><strong>Magpie Murders</strong> (Anthony Horowitz)</li>
-  <li><strong>Malice</strong> (Keigo Higashino)</li>
-  <li><strong>Meditations</strong> (Marcus Aurelius)</li>
-  <li><strong>Murder in the Crooked House</strong> (Soji Shimada)</li>
-  <li><strong>Murder of Roger Ackroyd</strong> (Agatha Christie)</li>
-  <li><strong>My Life as a Quant: Reflections on Physics and Finance</strong> (Emmanuel Derman)</li>
-  <li><strong>Naoko</strong> (Keigo Higashino)</li>
-  <li><strong>Newcomer: A Story of Destined Tokyo</strong> (Keigo Higashino)</li>
-  <li><strong>Numerical Matrix Analysis</strong> (Ilse Ipsen)</li>
-  <li><strong>On War</strong> (Carl von Clausewitz)</li>
-  <li><strong>On Writing Well</strong> (William Zinsser)</li>
-  <li><strong>Out</strong> (Natsuo Kirino)</li>
-  <li><strong>Penance</strong> (Kanae Minato)</li>
-  <li><strong>Points and Lines</strong> (Seicho Matsumoto)</li>
-  <li><strong>Problems and Snapshots from the World of Probability</strong> (Dennis Sandell, Gunnar Blom, and Lars Holst)</li>
-  <li><strong>Real World</strong> (Natsuo Kirino)</li>
-  <li><strong>Salvation of a Saint</strong> (Keigo Higashino)</li>
-  <li><strong>Sherlock Holmes: The Hound of the Baskervilles, A Study in Scarlet, The Valley of Fear, The Sign of Four</strong> (Arthur Conan Doyle)</li>
-  <li><strong>Shoe Dog</strong> (Phil Knight)</li>
-  <li><strong>Silent Parade: A Detective Galileo Novel</strong> (Keigo Higashino)</li>
-  <li><strong>Snow Country</strong> (Yasunari Kawabata)</li>
-  <li><strong>Survival of the Prettiest: The Science of Beauty</strong> (Nancy Etcoff)</li>
-  <li><strong>The Book of Evidence</strong> (John Banville)</li>
-  <li><strong>The Concepts and Practice of Mathematical Finance</strong> (Mark S. Joshi)</li>
-  <li><strong>The Decagon House Murders</strong> (Yukito Ayatsuji)</li>
-  <li><strong>The Devotion of Suspect X</strong> (Keigo Higashino)</li>
-  <li><strong>The Edogawa Rampo Reader</strong> (Edogawa Rampo)</li>
-  <li><strong>The Final Curtain</strong> (Keigo Higashino)</li>
-  <li><strong>The Goddess Chronicle</strong> (Natsuo Kirino)</li>
-  <li><strong>The Groves of Academe</strong> (Mary McCarthy)</li>
-  <li><strong>The Hollow Man</strong> (John Dickson Carr)</li>
-  <li><strong>The Honjin Murders</strong> (Seishi Yokomizo)</li>
-  <li><strong>The Inner Game of Tennis</strong> (W. Timothy Gallwey)</li>
-  <li><strong>The Lady Killer</strong> (Masako Togawa)</li>
-  <li><strong>The Lean Startup</strong> (Eric Ries)</li>
-  <li><strong>The Likeness</strong> (Tana French)</li>
-  <li><strong>The Little Book of Common Sense Investing: The Only Way to Guarantee Your Fair Share of Stock Market Returns</strong> (John C. Bogle)</li>
-  <li><strong>The Master Key</strong> (Masako Togawa)</li>
-  <li><strong>The Mill House Murders</strong> (Yukito Ayatsuji)</li>
-  <li><strong>The Miracles of the Namiya General Store</strong> (Keigo Higashino)</li>
-  <li><strong>The Murder of Roger Ackroyd</strong> (Agatha Christie)</li>
-  <li><strong>The Mystery of the Yellow Room</strong> (Gaston Leroux)</li>
-  <li><strong>The Name of the Game is a Kidnapping</strong> (Keigo Higashino)</li>
-  <li><strong>The Shadow University: The Betrayal Of Liberty On America's Campuses</strong> (Alan Charles Kors and Harvey Silverglate)</li>
-  <li><strong>The Splendid and the Vile: A Saga of Churchill, Family, and Defiance During the Blitz</strong></li>
-  <li><strong>The Tattoo Murder Case</strong> (Akimitsu Takagi)</li>
-  <li><strong>The Tokyo Zodiac Murders</strong> (Soji Shimada)</li>
-  <li><strong>The Wit and Wisdom of Charles T. Munger</strong> (Charlie Munger)</li>
-</ul>
+<p class="page-lede">Books I have enjoyed or am planning to read.</p>
+
+<div class="book-list">
+  {#each books as book (book.title)}
+    <article class="book">
+      <div class="book-main">
+        <h3>{book.title}</h3>
+        {#if book.author}
+          <p class="book-author">{book.author}</p>
+        {/if}
+      </div>
+    </article>
+  {/each}
+</div>

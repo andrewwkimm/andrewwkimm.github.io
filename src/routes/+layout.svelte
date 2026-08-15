@@ -2,15 +2,18 @@
   import { onMount } from 'svelte';
   import { afterNavigate } from '$app/navigation';
   import { analytics } from '$lib/analytics';
-  import Header from '$lib/components/Header.svelte';
-  import Footer from '$lib/components/Footer.svelte';
+  import { theme } from '$lib/theme.svelte';
+  import SiteHeader from '$lib/components/SiteHeader.svelte';
+  import SiteFooter from '$lib/components/SiteFooter.svelte';
   import '../app.css';
 
-  const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  let { children } = $props();
 
+  const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
   const isProduction = import.meta.env.PROD;
 
   onMount(() => {
+    theme.sync();
     analytics.initialize(GA_MEASUREMENT_ID, isProduction);
     analytics.trackPageView();
   });
@@ -20,12 +23,12 @@
   });
 </script>
 
-<Header />
+<SiteHeader />
 
-<main class="py-10">
-  <div class="wrapper">
-    <slot />
+<main>
+  <div class="wrapper page">
+    {@render children()}
   </div>
 </main>
 
-<Footer />
+<SiteFooter />
