@@ -43,6 +43,23 @@
             platforms, and tooling.
           </p>
         </div>
+        <p class="subscribe-lede">New posts by email. Nothing else, and you can leave in one click.</p>
+        <form
+          class="subscribe-form"
+          action="https://buttondown.com/api/emails/embed-subscribe/andrewwkimm"
+          method="post"
+          target="_blank"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            aria-label="Email address"
+            required
+          />
+          <input type="hidden" name="embed" value="1" />
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
     </div>
 

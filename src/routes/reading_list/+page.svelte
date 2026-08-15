@@ -1,12 +1,20 @@
 <script lang="ts">
-  type Book = { title: string; author: string };
+  type ReadingStatus = 'Reading' | 'Finished' | 'Want to read';
+
+  type Book = {
+    title: string;
+    author: string;
+    status?: ReadingStatus;
+    genres?: string;
+    review?: string[];
+  };
 
   const books: Book[] = [
     { title: '40 Puzzles and Problems in Probability and Mathematical Statistics', author: 'Wolfgang Schwarz' },
     { title: 'A Death in Tokyo', author: 'Keigo Higashino' },
     { title: 'A Farewell to Alms', author: 'Gregory Clark' },
     { title: 'A Midsummer\'s Equation', author: 'Keigo Higashino' },
-    { title: 'A Pattern Language: Towns, Buildings, Construction', author: 'Christopher Alexander' },
+    { title: 'A Pattern Language: Towns, Buildings, Construction', author: 'Christopher Alexander', status: 'Want to read', genres: 'Design, History' },
     { title: 'A Practical Guide To Quantitative Finance Interviews', author: 'Xinfeng Zhou' },
     { title: 'A Quiet Place', author: 'Matsumoto Seicho' },
     { title: 'Academically Adrift: Limited Learning on College Campuses', author: 'Richard Arum, Josipa Roksa' },
@@ -19,13 +27,13 @@
     { title: 'Confessions', author: 'Kanae Minato' },
     { title: 'Crime and Punishment', author: 'Fyodor Dostoevsky' },
     { title: 'Death in the House of Rain', author: 'Szu-Yen Lin' },
-    { title: 'Don\'t Make Me Think', author: 'Steve Krug' },
+    { title: 'Don\'t Make Me Think', author: 'Steve Krug', status: 'Finished', genres: 'Design, Technology', review: ['The central lesson is durable: interfaces should make the next action obvious without requiring instructions.'] },
     { title: 'Endless Night', author: 'Agatha Christie' },
     { title: 'Foreign Affairs', author: 'Alison Lurie' },
     { title: 'George Marshall: Defender of the Republic', author: '' },
     { title: 'Good-Bye to All That: An Autobiography', author: 'Robert Graves' },
     { title: 'Grotesque', author: 'Natsuo Kirino' },
-    { title: 'How Computers Really Work: A Hands-On Guide to the Inner Workings of the Machine', author: 'Matthew Justice' },
+    { title: 'How Computers Really Work: A Hands-On Guide to the Inner Workings of the Machine', author: 'Matthew Justice', status: 'Reading', genres: 'Technology' },
     { title: 'How to Prove It', author: 'Daniel J. Velleman' },
     { title: 'How to Solve It', author: 'George Pólya' },
     { title: 'How to Write Science Fiction and Fantasy', author: 'Orson Scott Card' },
@@ -43,7 +51,7 @@
     { title: 'Newcomer: A Story of Destined Tokyo', author: 'Keigo Higashino' },
     { title: 'Numerical Matrix Analysis', author: 'Ilse Ipsen' },
     { title: 'On War', author: 'Carl von Clausewitz' },
-    { title: 'On Writing Well', author: 'William Zinsser' },
+    { title: 'On Writing Well', author: 'William Zinsser', status: 'Finished', genres: 'Writing', review: ['Useful because its advice is concrete: remove clutter, respect the reader, and revise until the sentence says exactly what you mean.', 'The chapter on unity is the one I reread. Most of my bad drafts are unity problems wearing a vocabulary costume.'] },
     { title: 'Out', author: 'Natsuo Kirino' },
     { title: 'Penance', author: 'Kanae Minato' },
     { title: 'Points and Lines', author: 'Seicho Matsumoto' },
@@ -58,7 +66,7 @@
     { title: 'The Book of Evidence', author: 'John Banville' },
     { title: 'The Concepts and Practice of Mathematical Finance', author: 'Mark S. Joshi' },
     { title: 'The Decagon House Murders', author: 'Yukito Ayatsuji' },
-    { title: 'The Devotion of Suspect X', author: 'Keigo Higashino' },
+    { title: 'The Devotion of Suspect X', author: 'Keigo Higashino', status: 'Finished', genres: 'Mystery', review: ['Higashino gives you the crime in the first thirty pages, then spends the rest of the book making you doubt what you watched happen.'] },
     { title: 'The Edogawa Rampo Reader', author: 'Edogawa Rampo' },
     { title: 'The Final Curtain', author: 'Keigo Higashino' },
     { title: 'The Goddess Chronicle', author: 'Natsuo Kirino' },
@@ -79,24 +87,50 @@
     { title: 'The Shadow University: The Betrayal Of Liberty On America\'s Campuses', author: 'Alan Charles Kors and Harvey Silverglate' },
     { title: 'The Splendid and the Vile: A Saga of Churchill, Family, and Defiance During the Blitz', author: '' },
     { title: 'The Tattoo Murder Case', author: 'Akimitsu Takagi' },
-    { title: 'The Tokyo Zodiac Murders', author: 'Soji Shimada' },
+    { title: 'The Tokyo Zodiac Murders', author: 'Soji Shimada', status: 'Finished', genres: 'Mystery', review: ['The fairest impossible-crime puzzle I have read. It stops mid-book to tell you every clue is now in your hands, and it means it.'] },
     { title: 'The Wit and Wisdom of Charles T. Munger', author: 'Charlie Munger' },
   ];
+
+  function amazonUrl(book: Book): string {
+    const query = book.author ? `${book.title} ${book.author}` : book.title;
+    return `https://www.amazon.com/s?k=${encodeURIComponent(query)}`;
+  }
 </script>
 
 <h1 class="sr-only">Reading List</h1>
 
-<p class="page-lede">Books I have enjoyed or am planning to read.</p>
+<p class="page-lede">
+  Books I am reading, have finished, or want to read. Reviews are public when I have something
+  useful to add. Titles link to Amazon.
+</p>
 
-<div class="book-list">
+<ul class="book-list">
   {#each books as book (book.title)}
-    <article class="book">
+    <li class="book">
       <div class="book-main">
-        <h3>{book.title}</h3>
+        <h3><a href={amazonUrl(book)} rel="noopener noreferrer">{book.title}</a></h3>
         {#if book.author}
           <p class="book-author">{book.author}</p>
         {/if}
+        {#if book.review?.length}
+          <details class="review">
+            <summary><span>Review</span></summary>
+            <div>
+              {#each book.review as paragraph (paragraph)}
+                <p>{paragraph}</p>
+              {/each}
+            </div>
+          </details>
+        {/if}
       </div>
-    </article>
+      <div class="book-side">
+        {#if book.status}
+          <div class="book-status">{book.status}</div>
+        {/if}
+        {#if book.genres}
+          <div class="book-genres">{book.genres}</div>
+        {/if}
+      </div>
+    </li>
   {/each}
-</div>
+</ul>
