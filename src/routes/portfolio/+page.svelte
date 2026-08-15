@@ -42,11 +42,14 @@
 <Section title="Projects">
   <Entry
     title="koffee"
-    links={[{ text: 'GitHub', url: 'https://github.com/andrewwkimm/koffee' }]}
+    links={[
+      { text: 'GitHub', url: 'https://github.com/andrewwkimm/koffee' },
+      { text: 'Documentation', url: 'https://andrewwkimm.github.io/koffee' }
+    ]}
     imageSrc="/assets/images/koffee.png"
   >
     <p>koffee is a lightweight CLI tool that translates a given video file to the target
-    language, outputting a translated file with the subtitles embedded into it.</p>
+    language, outputting a translated subtitle file.</p>
 
     <p>It was developed for myself and friends at a Discord community where there are many
     fans of K-pop and Anime, serving dozens of users weekly.</p>
