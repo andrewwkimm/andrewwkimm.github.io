@@ -112,16 +112,6 @@
         {#if book.author}
           <p class="book-author">{book.author}</p>
         {/if}
-        {#if book.review?.length}
-          <details class="review">
-            <summary><span>Review</span></summary>
-            <div>
-              {#each book.review as paragraph (paragraph)}
-                <p>{paragraph}</p>
-              {/each}
-            </div>
-          </details>
-        {/if}
       </div>
       <div class="book-side">
         {#if book.status}
@@ -131,6 +121,16 @@
           <div class="book-genres">{book.genres}</div>
         {/if}
       </div>
+      {#if book.review?.length}
+        <details class="review">
+          <summary><span>Review</span></summary>
+          <div>
+            {#each book.review as paragraph (paragraph)}
+              <p>{paragraph}</p>
+            {/each}
+          </div>
+        </details>
+      {/if}
     </li>
   {/each}
 </ul>

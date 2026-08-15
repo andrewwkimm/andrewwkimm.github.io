@@ -234,20 +234,20 @@ sup.fnref { scroll-margin-top: 80px; }
 .subscribe-form button { flex-shrink: 0; padding: var(--sp-2) var(--sp-4); border: 1px solid var(--dark-gray); background: var(--bg); color: var(--dark-gray); font-size: var(--fs-meta); cursor: pointer; }
 .subscribe-form button:hover { background: var(--dark-gray); color: var(--bg); }
 
-.book { display: grid; grid-template-columns: minmax(0, 1fr) 25%; gap: var(--sp-6); padding: var(--sp-4) 0; border-bottom: 1px solid var(--border); }
+.book { display: grid; grid-template-columns: minmax(0, 1fr) 25%; grid-template-areas: 'main side' 'review review'; gap: 0 var(--sp-6); padding: var(--sp-4) 0; border-bottom: 1px solid var(--border); }
 .book:first-child { padding-top: 0; }
 .book:last-child, .book.is-last { padding-bottom: 0; border-bottom: 0; }
 .book[hidden] { display: none; }
-.book-main { min-width: 0; }
+.book-main { grid-area: main; min-width: 0; }
 .book-main > *:last-child { margin-bottom: 0; }
-.book-side { padding-top: 3px; color: var(--gray); font-size: var(--fs-meta); text-align: right; }
+.book-side { grid-area: side; padding-top: 3px; color: var(--gray); font-size: var(--fs-meta); text-align: right; }
 .book-status { color: var(--dark-gray); }
 .book-genres { margin-top: var(--sp-1); }
 .book h3 { font-size: var(--fs-h4); }
 .book h3 a { text-decoration: none; }
 .book h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .book-author { margin: var(--sp-1) 0 0; color: var(--dark-gray); }
-details.review { margin-top: var(--sp-1); }
+details.review { grid-area: review; margin-top: var(--sp-1); }
 details.review > summary { display: inline-flex; align-items: baseline; gap: var(--sp-2); width: fit-content; color: var(--gray); font-size: var(--fs-meta); list-style: none; cursor: pointer; }
 details.review > summary::-webkit-details-marker { display: none; }
 details.review > summary::before { content: '+'; display: inline-block; width: .7em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
@@ -291,7 +291,7 @@ details.review p:last-child { margin-bottom: 0; }
   .nav.open { display: flex; }
   .page { padding-top: var(--sp-6); }
   .entry-body { grid-template-columns: 1fr; gap: var(--sp-4); }
-  .book { grid-template-columns: 1fr; gap: var(--sp-1); }
+  .book { grid-template-columns: 1fr; grid-template-areas: 'main' 'side' 'review'; gap: var(--sp-1); }
   .book-side { padding-top: 0; text-align: left; }
   .project-media { max-width: 260px; }
   .filter-bar { flex-direction: column; align-items: flex-start; }
