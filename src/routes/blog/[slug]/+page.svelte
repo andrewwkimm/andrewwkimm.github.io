@@ -2,6 +2,8 @@
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
+
+  const Content = $derived(data.content);
 </script>
 
 <article>
@@ -16,7 +18,6 @@
   </div>
 
   <div class="article-body">
-    {@const Content = data.content}
     <Content />
   </div>
 </article>
