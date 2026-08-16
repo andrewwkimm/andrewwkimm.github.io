@@ -20,7 +20,7 @@ morning.
 
 > If a retry requires a human to decide whether the retry is safe, the stage is not finished.
 
-![The checksum gate sits between staging and commit, so a retry that produces identical bytes never writes twice.](../../static/assets/images/at-the-table.webp)
+![The checksum gate sits between staging and commit, so a retry that produces identical bytes never writes twice.](/assets/images/at-the-table.webp)
 
 ## Write the contract down
 
@@ -43,7 +43,7 @@ def load_partition(self, day: date) -> LoadResult:
     return self.commit(staged)
 ```
 
-![](../../static/assets/images/american-beauty-institute.png)
+![](/assets/images/american-beauty-institute.png)
 
 None of this is novel. It is just the set of decisions that stop being negotiable once you
 have been paged for the same bug twice.
