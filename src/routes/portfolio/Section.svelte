@@ -1,10 +1,10 @@
 <script lang="ts">
-  let { title, children } = $props();
+  let { title, children }: { title: string; children: import('svelte').Snippet } = $props();
 </script>
 
 <section class="section">
   <h2 class="section-title">{title}</h2>
-  <div class="project-list">
+  <ul class="project-list">
     {@render children()}
-  </div>
+  </ul>
 </section>

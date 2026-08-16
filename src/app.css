@@ -117,6 +117,7 @@ p { margin: 0 0 1.1rem; }
 .page-lede a { color: var(--gray); }
 .page-lede a:hover { color: var(--text); }
 .section { margin-top: var(--sp-9); }
+.section:first-of-type { margin-top: 0; }
 .section-title { padding-bottom: var(--sp-2); border-bottom: 1px solid var(--border); margin-bottom: var(--sp-6); font-size: var(--fs-h3); font-weight: 500; }
 .muted { color: var(--gray); }
 .small { font-size: var(--fs-meta); }
@@ -128,9 +129,9 @@ p { margin: 0 0 1.1rem; }
 .crumb button:hover { color: var(--text); }
 
 .filter-links { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin: 0 0 var(--sp-7); }
-.filter-links button { padding: 3px var(--sp-3); border: 1px solid var(--border); border-radius: var(--radius-pill); background: transparent; color: var(--gray); font-size: var(--fs-pill); cursor: pointer; }
-.filter-links button:hover { border-color: var(--dark-gray); color: var(--dark-gray); }
-.filter-links button.active { border-color: var(--dark-gray); color: var(--text); }
+.filter-links a, .filter-links button { padding: 3px var(--sp-3); border: 1px solid var(--border); border-radius: var(--radius-pill); background: transparent; color: var(--gray); font-size: var(--fs-pill); text-decoration: none; cursor: pointer; }
+.filter-links a:hover, .filter-links button:hover { border-color: var(--dark-gray); color: var(--dark-gray); }
+.filter-links a.active, .filter-links button.active { border-color: var(--dark-gray); color: var(--text); }
 
 .pill-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); margin: 0 0 var(--sp-3); }
 .pill { display: inline-flex; align-items: center; gap: var(--sp-1); padding: 2px var(--sp-2); border-radius: var(--radius-pill); background: var(--pill); color: var(--dark-gray); font-size: var(--fs-pill); line-height: 1.7; }
@@ -215,6 +216,7 @@ sup.fnref { scroll-margin-top: 80px; }
 .bar-count { color: var(--gray); font-size: var(--fs-meta); }
 .clear-link { padding: 0; border: 0; background: transparent; color: var(--gray); text-decoration: underline; text-underline-offset: 2px; font-size: var(--fs-meta); cursor: pointer; }
 .clear-link:hover { color: var(--text); }
+a.clear-link { display: inline-block; }
 .drop { position: relative; flex-shrink: 0; }
 .drop > summary { display: inline-flex; align-items: center; gap: var(--sp-2); padding: 3px var(--sp-3); border: 1px solid var(--border); border-radius: var(--radius-pill); color: var(--gray); background: var(--bg); font-size: var(--fs-pill); list-style: none; cursor: pointer; }
 .drop > summary::-webkit-details-marker { display: none; }

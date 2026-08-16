@@ -1,22 +1,31 @@
 <script lang="ts">
-  import Entry from './Entry.svelte';
-  import Section from './Section.svelte';
-  import SectionLinks from './SectionLinks.svelte';
-  import { TOTAL_ENTRIES } from '$lib/portfolio';
+  import Entry from '../Entry.svelte';
+  import SectionLinks from '../SectionLinks.svelte';
+  import type { PageData } from './$types';
+
+  let { data }: { data: PageData } = $props();
 </script>
+
+<svelte:head>
+  <title>{data.title} — Portfolio — Andrew Kim</title>
+</svelte:head>
 
 <h1 class="sr-only">Portfolio</h1>
 
 <p class="page-lede">Consulting engagements, projects, and open-source contributions.</p>
 
 <div class="filter-bar">
-  <SectionLinks />
+  <SectionLinks active={data.section} />
   <div class="bar-right">
-    <span class="bar-count">{TOTAL_ENTRIES} entries</span>
+    <span class="bar-count">
+      {data.count} {data.count === 1 ? data.noun : data.noun + 's'}
+    </span>
+    <a class="clear-link" href="/portfolio">Clear filter</a>
   </div>
 </div>
 
-<Section title="Consulting">
+<ul class="project-list">
+  {#if data.section === 'consulting'}
   <Entry
     title="American Beauty Institute"
     links={[
@@ -50,9 +59,7 @@
     <a href="https://www.cuny.edu/about/administration/offices/student-affairs/programs-services/foster-youth-college-success-initiative-fycsi/" target="_blank" rel="noopener noreferrer">CUNY's Foster Youth College Success Initiative</a>,
     among many other partner non-profits and foster care advocacy organizations.</p>
   </Entry>
-</Section>
-
-<Section title="Projects">
+  {:else if data.section === 'projects'}
   <Entry
     title="koffee"
     links={[
@@ -93,9 +100,7 @@
     It sources data from RAWG's public API and is ultimately fed into a Streamlit web app
     to visualize the trends.</p>
   </Entry>
-</Section>
-
-<Section title="Open source">
+  {:else}
   <Entry
     title="Dagster"
     links={[
@@ -126,4 +131,5 @@
     modules in LlamaIndex, the <code>SimpleDirectoryReader</code>, after I noticed it only
     accepted string paths.</p>
   </Entry>
-</Section>
+  {/if}
+</ul>

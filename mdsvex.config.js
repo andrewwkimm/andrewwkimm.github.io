@@ -1,8 +1,12 @@
 import { escapeSvelte } from 'mdsvex';
+import remarkGfm from 'remark-gfm';
 import { codeToHtml } from 'shiki';
+import { remarkFigure } from './src/lib/remark-figure.js';
 
 const config = {
   extensions: ['.svelte.md', '.md', '.svx'],
+
+  remarkPlugins: [remarkGfm, remarkFigure],
 
   highlight: {
     highlighter: async (code, lang = 'text') => {
