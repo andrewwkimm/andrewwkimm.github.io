@@ -83,7 +83,7 @@
       return;
     }
     if (query.trim() !== '') {
-      const target = `/search?q=${encodeURIComponent(query.trim())}`;
+      const target = `/search/?q=${encodeURIComponent(query.trim())}`;
       closeSearch();
       void goto(target);
     }

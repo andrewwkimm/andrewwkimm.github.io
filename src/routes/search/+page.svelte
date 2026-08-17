@@ -1,6 +1,5 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-  import { page } from '$app/state';
   import { onMount } from 'svelte';
   import Suggest from '$lib/components/Suggest.svelte';
   import {
@@ -12,7 +11,7 @@
     type SearchItem
   } from '$lib/search';
 
-  let query = $state(page.url.searchParams.get('q') ?? '');
+  let query = $state('');
   let index = $state<SearchItem[]>([]);
   let selected = $state(-1);
   let loading = $state(true);
@@ -21,6 +20,8 @@
   const suggestions = $derived(matchItems(index, query).slice(0, SUGGEST_LIMIT));
 
   onMount(() => {
+    query = new URLSearchParams(window.location.search).get('q') ?? '';
+
     void loadSearchIndex(fetch)
       .then((items) => {
         index = items;
