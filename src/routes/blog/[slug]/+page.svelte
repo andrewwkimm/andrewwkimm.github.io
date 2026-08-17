@@ -20,4 +20,18 @@
   <div class="article-body">
     <Content />
   </div>
+
+  {#if data.previous || data.next}
+    <nav class="article-foot" aria-label="Adjacent posts">
+      {#if data.previous}
+        <a href={`/blog/${data.previous.slug}`}>Previous: {data.previous.metadata.title}</a>
+      {:else}
+        <span></span>
+      {/if}
+
+      {#if data.next}
+        <a href={`/blog/${data.next.slug}`}>Next: {data.next.metadata.title}</a>
+      {/if}
+    </nav>
+  {/if}
 </article>

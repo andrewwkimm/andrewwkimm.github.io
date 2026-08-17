@@ -78,7 +78,7 @@ a:hover { color: var(--gray); }
 
 
 .site-header { flex-shrink: 0; border-top: 5px solid var(--dark-gray); border-bottom: 1px solid var(--border); }
-.header-row { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-5); padding: var(--sp-3) 0; }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-5); padding: var(--sp-4) 0; }
 .brand { padding: 0; border: 0; background: transparent; color: var(--gray); font-family: inherit; font-size: var(--fs-brand); font-weight: 400; line-height: 1.2; letter-spacing: -.02em; cursor: pointer; }
 .brand:hover { text-decoration: underline; }
 .nav { display: flex; align-items: center; gap: var(--sp-6); }
@@ -105,7 +105,6 @@ html[data-theme='dark'] .theme-toggle .sun { display: block; }
 .suggest .sk { display: block; color: var(--gray); font-size: var(--fs-xs); }
 .suggest mark { background: var(--mark); color: inherit; }
 
-main { flex: 1; }
 .page { padding: var(--sp-7) 0; }
 h1, h2, h3 { margin: 0; line-height: 1.25; font-weight: 600; }
 h1 { margin-bottom: var(--sp-2); font-size: var(--fs-h1); letter-spacing: -.01em; }
@@ -187,9 +186,9 @@ sup.fnref:target a, li.fn:target { background: var(--mark); }
 .fn-back:hover { text-decoration: underline; }
 sup.fnref { scroll-margin-top: 80px; }
 
-.article-foot { margin-top: var(--sp-5); padding: var(--sp-5) 0 var(--sp-9); border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: var(--sp-5); font-size: var(--fs-meta); }
-.article-foot button { padding: 0; border: 0; background: transparent; color: var(--text); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; text-align: left; }
-.article-foot button:hover { color: var(--gray); }
+.article-foot { margin-top: var(--sp-5); padding-top: var(--sp-5); border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: var(--sp-5); font-size: var(--fs-meta); }
+.article-foot a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; text-align: left; }
+.article-foot a:hover { color: var(--gray); }
 
 .project-entry { padding-bottom: var(--sp-6); margin-bottom: var(--sp-6); border-bottom: 1px solid var(--border); }
 .project-entry:last-child, .project-entry.is-last { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
@@ -236,28 +235,13 @@ a.clear-link { display: inline-block; }
 .subscribe-form button { flex-shrink: 0; padding: var(--sp-2) var(--sp-4); border: 1px solid var(--dark-gray); background: var(--bg); color: var(--dark-gray); font-size: var(--fs-meta); cursor: pointer; }
 .subscribe-form button:hover { background: var(--dark-gray); color: var(--bg); }
 
-.book { display: grid; grid-template-columns: minmax(0, 1fr) 25%; grid-template-areas: 'main side' 'review review'; gap: 0 var(--sp-6); padding: var(--sp-4) 0; border-bottom: 1px solid var(--border); }
+.book { padding: var(--sp-4) 0; border-bottom: 1px solid var(--border); }
 .book:first-child { padding-top: 0; }
-.book:last-child, .book.is-last { padding-bottom: 0; border-bottom: 0; }
-.book[hidden] { display: none; }
-.book-main { grid-area: main; min-width: 0; }
-.book-main > *:last-child { margin-bottom: 0; }
-.book-side { grid-area: side; padding-top: 3px; color: var(--gray); font-size: var(--fs-meta); text-align: right; }
-.book-status { color: var(--dark-gray); }
-.book-genres { margin-top: var(--sp-1); }
+.book:last-child { padding-bottom: 0; border-bottom: 0; }
 .book h3 { font-size: var(--fs-h4); }
 .book h3 a { text-decoration: none; }
 .book h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .book-author { margin: var(--sp-1) 0 0; color: var(--dark-gray); }
-details.review { grid-area: review; margin-top: var(--sp-1); }
-details.review > summary { display: inline-flex; align-items: baseline; gap: var(--sp-2); width: fit-content; color: var(--gray); font-size: var(--fs-meta); list-style: none; cursor: pointer; }
-details.review > summary::-webkit-details-marker { display: none; }
-details.review > summary::before { content: '+'; display: inline-block; width: .7em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-details.review[open] > summary::before { content: '\2212'; }
-details.review > summary:hover { color: var(--text); }
-details.review > summary span { text-decoration: underline; text-underline-offset: 2px; }
-details.review > div { margin-top: var(--sp-2); padding: var(--sp-3) var(--sp-4); background: var(--soft); }
-details.review p:last-child { margin-bottom: 0; }
 
 .search-box { position: relative; margin: 0 0 var(--sp-2); }
 .search-box input { width: 100%; padding: var(--sp-3) var(--sp-3); border: 1px solid var(--border); background: var(--bg); color: var(--text); }
@@ -287,14 +271,12 @@ details.review p:last-child { margin-bottom: 0; }
 .copyright { margin: 0; color: var(--gray); text-align: center; font-size: var(--fs-meta); }
 
 @media screen and (max-width: 700px) {
-  .header-row { flex-wrap: wrap; padding: var(--sp-2) 0; }
+  .header-row { flex-wrap: wrap; padding: var(--sp-4) 0; }
   .menu-button { display: block; }
   .nav { display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 3px; padding: 4px 0 var(--sp-2); }
   .nav.open { display: flex; }
-  .page { padding-top: var(--sp-6); }
+  .page { padding-top: var(--sp-7); }
   .entry-body { grid-template-columns: 1fr; gap: var(--sp-4); }
-  .book { grid-template-columns: 1fr; grid-template-areas: 'main' 'side' 'review'; gap: var(--sp-1); }
-  .book-side { padding-top: 0; text-align: left; }
   .project-media { max-width: 260px; }
   .filter-bar { flex-direction: column; align-items: flex-start; }
   .drop-menu { right: auto; left: 0; }
@@ -306,7 +288,6 @@ details.review p:last-child { margin-bottom: 0; }
   .wrapper, main, .page { max-width: 100% !important; width: 100% !important; }
   section, .section, .site-footer, .post, .book, .project-entry, .result { break-inside: avoid; margin-bottom: var(--sp-5) !important; }
   [class*="grid"], [class*="row"] { gap: var(--sp-2) !important; }
-  details.review > div { display: block !important; }
   button, [role="button"], .interactive-only { display: none !important; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }

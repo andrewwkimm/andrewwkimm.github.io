@@ -7,7 +7,7 @@
 <ul class="post-list">
   {#each posts as post (post.slug)}
     <li class="post">
-      <h2><a href="/blog/{post.slug}">{post.metadata.title}</a></h2>
+      <h2><a href={`/blog/${post.slug}/`} data-sveltekit-reload>{post.metadata.title}</a></h2>
       <p class="post-meta">
         {post.metadata.date}
         {#if post.metadata.tags?.length}

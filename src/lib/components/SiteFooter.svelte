@@ -43,7 +43,7 @@
             platforms, and tooling.
           </p>
         </div>
-        <p class="subscribe-lede">New posts by email. Nothing else, and you can leave in one click.</p>
+        <p class="subscribe-lede">Subscribe to my newsletter.</p>
         <form
           class="subscribe-form"
           action="https://buttondown.com/api/emails/embed-subscribe/andrewwkimm"

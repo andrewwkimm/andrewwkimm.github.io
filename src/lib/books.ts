@@ -1,25 +1,14 @@
-export type ReadingStatus = 'Reading' | 'Finished' | 'Want to read';
-
 export interface Book {
   title: string;
   author: string;
-  status?: ReadingStatus;
-  genres?: string;
-  review?: string[];
 }
 
-export const STATUS_SLUGS: Record<string, ReadingStatus> = {
-  reading: 'Reading',
-  finished: 'Finished',
-  'want-to-read': 'Want to read'
-};
-
-export const books: Book[] = [
+const BOOKS: Book[] = [
     { title: '40 Puzzles and Problems in Probability and Mathematical Statistics', author: 'Wolfgang Schwarz' },
     { title: 'A Death in Tokyo', author: 'Keigo Higashino' },
     { title: 'A Farewell to Alms', author: 'Gregory Clark' },
     { title: 'A Midsummer\'s Equation', author: 'Keigo Higashino' },
-    { title: 'A Pattern Language: Towns, Buildings, Construction', author: 'Christopher Alexander', status: 'Want to read', genres: 'Design, History' },
+    { title: 'A Pattern Language: Towns, Buildings, Construction', author: 'Christopher Alexander' },
     { title: 'A Practical Guide To Quantitative Finance Interviews', author: 'Xinfeng Zhou' },
     { title: 'A Quiet Place', author: 'Matsumoto Seicho' },
     { title: 'Academically Adrift: Limited Learning on College Campuses', author: 'Richard Arum, Josipa Roksa' },
@@ -32,13 +21,13 @@ export const books: Book[] = [
     { title: 'Confessions', author: 'Kanae Minato' },
     { title: 'Crime and Punishment', author: 'Fyodor Dostoevsky' },
     { title: 'Death in the House of Rain', author: 'Szu-Yen Lin' },
-    { title: 'Don\'t Make Me Think', author: 'Steve Krug', status: 'Finished', genres: 'Design, Technology', review: ['The central lesson is durable: interfaces should make the next action obvious without requiring instructions.'] },
+    { title: 'Don\'t Make Me Think', author: 'Steve Krug' },
     { title: 'Endless Night', author: 'Agatha Christie' },
     { title: 'Foreign Affairs', author: 'Alison Lurie' },
     { title: 'George Marshall: Defender of the Republic', author: '' },
     { title: 'Good-Bye to All That: An Autobiography', author: 'Robert Graves' },
     { title: 'Grotesque', author: 'Natsuo Kirino' },
-    { title: 'How Computers Really Work: A Hands-On Guide to the Inner Workings of the Machine', author: 'Matthew Justice', status: 'Reading', genres: 'Technology' },
+    { title: 'How Computers Really Work: A Hands-On Guide to the Inner Workings of the Machine', author: 'Matthew Justice' },
     { title: 'How to Prove It', author: 'Daniel J. Velleman' },
     { title: 'How to Solve It', author: 'George Pólya' },
     { title: 'How to Write Science Fiction and Fantasy', author: 'Orson Scott Card' },
@@ -56,7 +45,7 @@ export const books: Book[] = [
     { title: 'Newcomer: A Story of Destined Tokyo', author: 'Keigo Higashino' },
     { title: 'Numerical Matrix Analysis', author: 'Ilse Ipsen' },
     { title: 'On War', author: 'Carl von Clausewitz' },
-    { title: 'On Writing Well', author: 'William Zinsser', status: 'Finished', genres: 'Writing', review: ['Useful because its advice is concrete: remove clutter, respect the reader, and revise until the sentence says exactly what you mean.', 'The chapter on unity is the one I reread. Most of my bad drafts are unity problems wearing a vocabulary costume.'] },
+    { title: 'On Writing Well', author: 'William Zinsser' },
     { title: 'Out', author: 'Natsuo Kirino' },
     { title: 'Penance', author: 'Kanae Minato' },
     { title: 'Points and Lines', author: 'Seicho Matsumoto' },
@@ -71,7 +60,7 @@ export const books: Book[] = [
     { title: 'The Book of Evidence', author: 'John Banville' },
     { title: 'The Concepts and Practice of Mathematical Finance', author: 'Mark S. Joshi' },
     { title: 'The Decagon House Murders', author: 'Yukito Ayatsuji' },
-    { title: 'The Devotion of Suspect X', author: 'Keigo Higashino', status: 'Finished', genres: 'Mystery', review: ['Higashino gives you the crime in the first thirty pages, then spends the rest of the book making you doubt what you watched happen.'] },
+    { title: 'The Devotion of Suspect X', author: 'Keigo Higashino' },
     { title: 'The Edogawa Rampo Reader', author: 'Edogawa Rampo' },
     { title: 'The Final Curtain', author: 'Keigo Higashino' },
     { title: 'The Goddess Chronicle', author: 'Natsuo Kirino' },
@@ -92,32 +81,24 @@ export const books: Book[] = [
     { title: 'The Shadow University: The Betrayal Of Liberty On America\'s Campuses', author: 'Alan Charles Kors and Harvey Silverglate' },
     { title: 'The Splendid and the Vile: A Saga of Churchill, Family, and Defiance During the Blitz', author: '' },
     { title: 'The Tattoo Murder Case', author: 'Akimitsu Takagi' },
-    { title: 'The Tokyo Zodiac Murders', author: 'Soji Shimada', status: 'Finished', genres: 'Mystery', review: ['The fairest impossible-crime puzzle I have read. It stops mid-book to tell you every clue is now in your hands, and it means it.'] },
+    { title: 'The Tokyo Zodiac Murders', author: 'Soji Shimada' },
     { title: 'The Wit and Wisdom of Charles T. Munger', author: 'Charlie Munger' },
 ];
+
+const LEADING_ARTICLE = /^(?:a|an|the)\s+/i;
+
+function sortTitle(title: string): string {
+  return title.replace(LEADING_ARTICLE, '');
+}
+
+export const books = [...BOOKS].sort((left, right) => {
+  const bySortTitle = sortTitle(left.title).localeCompare(sortTitle(right.title), 'en', {
+    sensitivity: 'base'
+  });
+  return bySortTitle || left.title.localeCompare(right.title, 'en', { sensitivity: 'base' });
+});
 
 export function amazonUrl(book: Book): string {
   const query = book.author ? `${book.title} ${book.author}` : book.title;
   return `https://www.amazon.com/s?k=${encodeURIComponent(query)}`;
-}
-
-export function genreSlugs(book: Book): string {
-  if (!book.genres) return '';
-  return book.genres
-    .split(',')
-    .map((genre) => genre.trim().toLowerCase())
-    .join(' ');
-}
-
-export function allGenres(): string[] {
-  const seen = new Set<string>();
-  for (const book of books) {
-    if (!book.genres) continue;
-    for (const genre of book.genres.split(',')) seen.add(genre.trim());
-  }
-  return Array.from(seen).sort();
-}
-
-export function booksByStatus(status: ReadingStatus): Book[] {
-  return books.filter((book) => book.status === status);
 }

@@ -20,7 +20,7 @@ const STATIC_PAGES: { title: string; url: string; meta: string }[] = [
   { title: 'Andrew Kim', url: '/', meta: 'Home' },
   { title: 'Blog', url: '/blog', meta: 'All posts' },
   { title: 'Portfolio', url: '/portfolio', meta: 'Consulting, projects, and open source' },
-  { title: 'Reading List', url: '/reading_list', meta: 'Books and reviews' }
+  { title: 'Reading List', url: '/reading_list', meta: 'Books' }
 ];
 
 const DATE_FORMAT: Intl.DateTimeFormatOptions = {
@@ -54,15 +54,11 @@ function postItem(post: Post): SearchItem {
 }
 
 function bookItem(book: Book): SearchItem {
-  const parts = [book.author];
-  if (book.status) parts.push(book.status);
-  if (book.genres) parts.push(book.genres);
-
   return searchable({
     title: book.title,
     url: amazonUrl(book),
     kind: 'Reading',
-    meta: parts.filter((part) => part !== '').join(' | ')
+    meta: book.author
   });
 }
 

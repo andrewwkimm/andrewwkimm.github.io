@@ -5,18 +5,30 @@
     locked = false
   }: { tags: string[]; selected?: string[]; locked?: boolean } = $props();
 
+  let dropdown: HTMLDetailsElement;
   let open = $state(false);
 
   const label = $derived(selected.length === 0 ? 'Tags' : `Tags (${selected.length})`);
 
-  function toggle(tag: string) {
+  function toggle(tag: string): void {
     selected = selected.includes(tag)
       ? selected.filter((value) => value !== tag)
       : [...selected, tag];
   }
+
+  function closeOnOutsideClick(event: MouseEvent): void {
+    const target = event.target;
+    if (open && target instanceof Node && !dropdown.contains(target)) open = false;
+  }
+
+  function closeOnEscape(event: KeyboardEvent): void {
+    if (event.key === 'Escape') open = false;
+  }
 </script>
 
-<details class="drop" bind:open>
+<svelte:window onclick={closeOnOutsideClick} onkeydown={closeOnEscape} />
+
+<details class="drop" bind:this={dropdown} bind:open>
   <summary><span>{label}</span></summary>
   <div class="drop-menu">
     {#each tags as tag (tag)}
