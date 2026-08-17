@@ -35,9 +35,11 @@ An ordered list:
 
 ## Code block
 
-    def sample(value: str) -> str:
-        """Returns a formatted sample value."""
-        return f"Sample: {value}"
+```python
+def sample(value: str) -> str:
+    """Returns a formatted sample value."""
+    return f"Sample: {value}"
+```
 
 The closing paragraph tests the final text-to-footnote spacing.
 

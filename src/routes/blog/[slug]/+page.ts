@@ -14,11 +14,8 @@ export async function load({ params }) {
 
   if (index < 0) error(404, `Unknown post ${params.slug}`);
 
-  const post = await import(`../../../posts/${params.slug}.md`);
-
   return {
-    content: post.default,
-    metadata: post.metadata,
+    post: posts[index],
     previous: posts[index + 1] ?? null,
     next: posts[index - 1] ?? null
   };

@@ -150,13 +150,20 @@
         placeholder="Search posts, projects, books, and pages"
         autocomplete="off"
         role="combobox"
+        aria-controls="header-search-suggestions"
         aria-expanded={suggestions.length > 0}
         aria-autocomplete="list"
         aria-label="Search this site"
         oninput={() => (selected = -1)}
         onkeydown={handleSearchKeydown}
       />
-      <Suggest items={suggestions} term={query.trim()} bind:selected onchoose={choose} />
+      <Suggest
+        id="header-search-suggestions"
+        items={suggestions}
+        term={query.trim()}
+        bind:selected
+        onchoose={choose}
+      />
     </div>
     <button type="button" aria-label="Close search" onclick={closeSearch}>Close</button>
   </div>

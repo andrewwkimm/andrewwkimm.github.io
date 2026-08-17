@@ -74,13 +74,20 @@
     placeholder="Type to search"
     autocomplete="off"
     role="combobox"
+    aria-controls="page-search-suggestions"
     aria-expanded={suggestions.length > 0}
     aria-autocomplete="list"
     aria-label="Search this site"
     oninput={() => (selected = -1)}
     onkeydown={handleKeydown}
   />
-  <Suggest items={suggestions} term={query.trim()} bind:selected onchoose={choose} />
+  <Suggest
+    id="page-search-suggestions"
+    items={suggestions}
+    term={query.trim()}
+    bind:selected
+    onchoose={choose}
+  />
 </div>
 
 <p class="search-status">

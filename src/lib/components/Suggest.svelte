@@ -2,11 +2,13 @@
   import type { SearchItem } from '$lib/search';
 
   let {
+    id,
     items,
     term,
     selected = $bindable(-1),
     onchoose
   }: {
+    id: string;
     items: SearchItem[];
     term: string;
     selected?: number;
@@ -27,7 +29,7 @@
   }
 </script>
 
-<div class="suggest" role="listbox" hidden={items.length === 0}>
+<div id={id} class="suggest" role="listbox" hidden={items.length === 0}>
   {#each items as item, index (item.url + item.title)}
     <button
       type="button"
