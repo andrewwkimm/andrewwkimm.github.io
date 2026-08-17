@@ -1,10 +1,20 @@
-## [andrewwkimm.github.io](https://andrewwkimm.github.io/)
+# andrewwkimm.github.io
 
-This is the repository with the source code for my personal website. It is built using [SvelteKit](https://kit.svelte.dev/) and [Tailwind CSS](https://tailwindcss.com/).
+Source for [andrewwkimm.github.io](https://andrewwkimm.github.io/).
 
-To run it locally:
+The site uses SvelteKit, Svelte 5, mdsvex, Vite, and `adapter-static`. The browser-facing contract is documented in [`DESIGN.md`](DESIGN.md).
+
+## Local development
 
 ```sh
 npm install
 npm run dev
+```
+
+## Validation
+
+```sh
+npm run check
+npm run build
+npm run lint
 ```
