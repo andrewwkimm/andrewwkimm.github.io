@@ -1,6 +1,19 @@
+export const BOOK_STATUS_FILTERS = [
+  { slug: 'reading', label: 'Reading' },
+  { slug: 'finished', label: 'Finished' },
+  { slug: 'want-to-read', label: 'Want to read' }
+] as const;
+
+export type BookStatus = (typeof BOOK_STATUS_FILTERS)[number]['label'];
+export type BookStatusSlug = (typeof BOOK_STATUS_FILTERS)[number]['slug'];
+
 export interface Book {
   title: string;
   author: string;
+  /** Optional metadata activates status, genre, and review UI. */
+  status?: BookStatus;
+  genres?: string[];
+  review?: string;
 }
 
 const BOOKS: Book[] = [
@@ -83,6 +96,13 @@ const BOOKS: Book[] = [
     { title: 'The Tattoo Murder Case', author: 'Akimitsu Takagi' },
     { title: 'The Tokyo Zodiac Murders', author: 'Soji Shimada' },
     { title: 'The Wit and Wisdom of Charles T. Munger', author: 'Charlie Munger' },
+    {
+      title: 'Writing Without Bullshit',
+      author: 'Josh Bernoff',
+      status: 'Finished',
+      genres: ['Writing'],
+      review: 'My favorite book on business writing.'
+    },
 ];
 
 const LEADING_ARTICLE = /^(?:a|an|the)\s+/i;
@@ -101,4 +121,24 @@ export const books = [...BOOKS].sort((left, right) => {
 export function amazonUrl(book: Book): string {
   const query = book.author ? `${book.title} ${book.author}` : book.title;
   return `https://www.amazon.com/s?k=${encodeURIComponent(query)}`;
+}
+
+export function allGenres(collection: Book[] = books): string[] {
+  return [...new Set(collection.flatMap((book) => book.genres ?? []))].sort((a, b) =>
+    a.localeCompare(b)
+  );
+}
+
+export function availableStatusFilters(collection: Book[] = books) {
+  return BOOK_STATUS_FILTERS.filter((filter) =>
+    collection.some((book) => book.status === filter.label)
+  );
+}
+
+export function statusFromSlug(slug: string): BookStatus | undefined {
+  return BOOK_STATUS_FILTERS.find((filter) => filter.slug === slug)?.label;
+}
+
+export function booksByStatus(status: BookStatus): Book[] {
+  return books.filter((book) => book.status === status);
 }

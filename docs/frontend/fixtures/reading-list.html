@@ -1,7 +1,14 @@
 <!-- Stable reading-list content inside .wrapper.page. -->
 <h1 class="sr-only">Reading List</h1>
 <p class="page-lede">Books on my reading list. Titles link to Amazon.</p>
+<div class="filter-bar">
+  <nav class="filter-links" aria-label="Reading status"><a class="active" href="/reading_list/finished/">Finished</a></nav>
+  <details class="drop drop-right"><summary><span>Genres</span></summary><div class="drop-menu"><label class="drop-option"><input type="checkbox"> Writing</label></div></details>
+</div>
 <ul class="book-list">
-  <li class="book"><h3><a href="https://example.com">A Sample Book</a></h3><p class="book-author">Example Author</p></li>
-  <li class="book"><h3><a href="https://example.com">The Second Book</a></h3><p class="book-author">Second Author</p></li>
+  <li class="book book-with-metadata">
+    <div class="book-main"><h3><a href="https://example.com">Writing Without Bullshit</a></h3><p class="book-author">Josh Bernoff</p></div>
+    <div class="book-side"><div class="book-status">Finished</div><div class="book-genres">Writing</div></div>
+    <details class="review"><summary><span>Review</span></summary><div><p>My favorite book on business writing.</p></div></details>
+  </li>
 </ul>

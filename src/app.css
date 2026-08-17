@@ -328,3 +328,32 @@ a.clear-link { display: inline-block; }
 .article-body pre.shiki { margin: 0 0 var(--space-item); padding: var(--space-row); overflow-x: auto; border-radius: var(--radius-sm); line-height: 1.5; }
 .article-body pre.shiki code { padding: 0; background: none; font-size: var(--fs-code); }
 .resume-line { margin-bottom: 0; }
+
+/* Optional reading metadata: start */
+.book { display: grid; grid-template-columns: 1fr; grid-template-areas: 'main' 'review'; padding: var(--space-row, var(--sp-4)) 0; border-bottom: 1px solid var(--border); }
+.book.book-with-metadata { grid-template-columns: minmax(0, 1fr) 25%; grid-template-areas: 'main side' 'review review'; gap: 0 var(--space-item, var(--sp-6)); }
+.book:first-child { padding-top: 0; }
+.book:last-child { padding-bottom: 0; border-bottom: 0; }
+.book-main { grid-area: main; min-width: 0; }
+.book-main > *:last-child { margin-bottom: 0; }
+.book-side { grid-area: side; padding-top: 3px; color: var(--gray); font-size: var(--fs-meta); text-align: right; }
+.book-status { color: var(--dark-gray); }
+.book-genres { margin-top: var(--space-related, var(--sp-1)); }
+.book h3 { font-size: var(--fs-h4); }
+.book h3 a { text-decoration: none; }
+.book h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.book-author { margin: var(--space-related, var(--sp-1)) 0 0; color: var(--dark-gray); }
+details.review { grid-area: review; margin-top: var(--space-related, var(--sp-1)); }
+details.review > summary { display: inline-flex; align-items: baseline; gap: var(--space-related, var(--sp-2)); width: fit-content; color: var(--gray); font-size: var(--fs-meta); list-style: none; cursor: pointer; }
+details.review > summary::-webkit-details-marker { display: none; }
+details.review > summary::before { content: '+'; display: inline-block; width: .7em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+details.review[open] > summary::before { content: '\2212'; }
+details.review > summary:hover { color: var(--text); }
+details.review > summary span { text-decoration: underline; text-underline-offset: 2px; }
+details.review > div { margin-top: var(--space-related, var(--sp-2)); padding: var(--space-control, var(--sp-3)) var(--space-row, var(--sp-4)); background: var(--soft); }
+details.review p:last-child { margin-bottom: 0; }
+@media screen and (max-width: 700px) {
+  .book.book-with-metadata { grid-template-columns: 1fr; grid-template-areas: 'main' 'side' 'review'; gap: var(--space-related, var(--sp-1)); }
+  .book-side { padding-top: 0; text-align: left; }
+}
+/* Optional reading metadata: end */

@@ -158,3 +158,18 @@ A new generator must:
 6. verify keyboard search, filters, theme persistence, footnotes, and article navigation.
 
 Backend templates may differ. Browser output changes only through an intentional contract update.
+
+<!-- reading-metadata:start -->
+## Reading metadata
+
+Book status, genres, and reviews are optional capabilities.
+
+- A book without metadata renders only its title and author.
+- Status links render only for statuses used by at least one book.
+- The genre dropdown renders only when at least one genre exists.
+- A review toggle renders only on a book with review text.
+- Status pages are prerendered only for statuses currently in use.
+- Adding metadata to `src/lib/books.ts` activates the corresponding UI without a component change.
+
+`Writing Without Bullshit` is the current reference entry. It exercises `Finished`, `Writing`, and the review panel.
+<!-- reading-metadata:end -->

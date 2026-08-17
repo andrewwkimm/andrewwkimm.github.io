@@ -54,11 +54,15 @@ function postItem(post: Post): SearchItem {
 }
 
 function bookItem(book: Book): SearchItem {
+  const parts = [book.author];
+  if (book.status) parts.push(book.status);
+  if (book.genres?.length) parts.push(book.genres.join(', '));
+
   return searchable({
     title: book.title,
     url: amazonUrl(book),
     kind: 'Reading',
-    meta: book.author
+    meta: parts.filter((part) => part !== '').join(' | ')
   });
 }
 
