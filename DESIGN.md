@@ -47,6 +47,8 @@ Every page uses this order:
 3. `main > .wrapper.page`
 4. `footer.site-footer`
 
+`body` is a full-height column flex container. `main` uses `flex: 1` to absorb only unused viewport height. Short pages push the footer to the viewport floor. Long pages keep the footer after the content in normal document flow. The footer is never fixed and never covers content.
+
 `.wrapper` sets the shared content width. `.page` owns the space between the header rule and page content. `.site-footer` owns the space on both sides of its content. Final children end with zero bottom margin, which prevents extra boundary space.
 
 The visible page title may be omitted when the page context is obvious, but every page must retain one `h1`. Use `.sr-only` for an intentionally hidden title.
@@ -123,6 +125,8 @@ The footer has one top rule. These three gaps all use `--space-page`:
 1. page content to the footer rule;
 2. footer rule to the social and subscription row;
 3. footer row to the copyright and page bottom.
+
+The footer follows the sticky-footer pattern defined by the page shell. It remains in normal document flow. `main`, not the footer, receives unused viewport height.
 
 The desktop footer uses a one-third/two-thirds grid. Mobile uses one column.
 
