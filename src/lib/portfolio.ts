@@ -21,18 +21,22 @@ export const SECTIONS: Record<PortfolioSection, { title: string; noun: string }>
 
 export const SECTION_ORDER: PortfolioSection[] = ['consulting', 'projects', 'open-source'];
 
+export const PORTFOLIO_ENTRIES: { title: string; section: PortfolioSection }[] = [
+  { title: 'American Beauty Institute', section: 'consulting' },
+  { title: 'At The Table', section: 'consulting' },
+  { title: 'Qubeley', section: 'projects' },
+  { title: 'koffee', section: 'projects' },
+  { title: 'RAWG Video Game Data Pipeline', section: 'projects' },
+  { title: 'Dagster', section: 'open-source' },
+  { title: 'LlamaIndex', section: 'open-source' }
+];
+
+export const TOTAL_ENTRIES = PORTFOLIO_ENTRIES.length;
+
 export function isPortfolioSection(value: string): value is PortfolioSection {
   return value in SECTIONS;
 }
 
 export function entryCount(section: PortfolioSection): number {
-  return SECTION_COUNTS[section];
+  return PORTFOLIO_ENTRIES.filter((entry) => entry.section === section).length;
 }
-
-const SECTION_COUNTS: Record<PortfolioSection, number> = {
-  consulting: 2,
-  projects: 3,
-  'open-source': 2
-};
-
-export const TOTAL_ENTRIES = 7;
