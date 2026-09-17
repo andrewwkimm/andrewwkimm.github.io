@@ -61,10 +61,10 @@ The primitive scale is fixed in 4px steps. Primitive tokens describe size. Seman
 | --- | ---: | --- |
 | `--space-related` | 8px | Closely related text or controls |
 | `--space-control` | 12px | Control interiors and compact groups |
-| `--space-row` | 16px | Header interiors and list-row padding |
+| `--space-row` | 16px | Header and footer interiors and list-row padding |
 | `--space-rule` | 20px | Space on each side of an internal rule |
 | `--space-item` | 24px | Peer items and filter-to-content separation |
-| `--space-page` | 32px | Header-to-content and footer boundaries |
+| `--space-page` | 32px | Header-to-content and content-to-footer-rule boundaries |
 | `--space-article` | 40px | New article sections |
 | `--space-section` | 48px | Major page sections |
 
@@ -74,11 +74,14 @@ Rules:
 - Use primitive tokens for local geometry when no semantic role applies.
 - Every spacing value comes from the documented scale.
 - Adjacent regions that serve the same role use the same token.
-- A full-width page rule has `--space-page` clearance from the nearest page content unless the rule is inside an article. Article rules use `--space-rule`.
+- A full-width page rule has `--space-page` clearance on its page-content side. Header and footer interiors use `--space-row`. Article rules use `--space-rule`.
+- Optical exception: a literal value (for example pill vertical padding or baseline alignment) is permitted only with a comment at the rule explaining why the scale does not apply.
 
 ## Typography
 
 The body uses Lora with Georgia and Times New Roman fallbacks. The type scale lives in `src/app.css`. Headings use weight 600 and compact line height. Body text uses an 18px base size and 1.6 line height.
+
+Line heights use tokens: `--lh-body` (1.6), `--lh-heading` (1.25), `--lh-code` (1.5). Icon sizes use tokens: `--icon-lg` (17px), `--icon-md` (15px), `--icon-sm` (11px). The 5px site top border is `--border-accent`.
 
 The body keeps one font family. Monospace is limited to code and generated code highlighting.
 
@@ -120,11 +123,11 @@ Adjacent-post links are ordered by publication date. A missing side remains empt
 
 ### Footer
 
-The footer has one top rule. These three gaps all use `--space-page`:
+The footer has one top rule. Page content keeps `--space-page` clearance above the rule. The footer interior matches the header interior: these three gaps all use `--space-row`:
 
-1. page content to the footer rule;
-2. footer rule to the social and subscription row;
-3. footer row to the copyright and page bottom.
+1. footer rule to the social and subscription row;
+2. subscription form to the copyright;
+3. copyright to the page bottom.
 
 The footer follows the sticky-footer pattern defined by the page shell. It remains in normal document flow. `main`, not the footer, receives unused viewport height.
 
