@@ -25,10 +25,7 @@
   <div class="article-head">
     <h1>{data.post.metadata.title}</h1>
     <p class="post-meta">
-      {data.post.metadata.date}
-      {#if data.post.metadata.tags?.length}
-        <span class="bar">|</span>{data.post.metadata.tags.join(', ')}
-      {/if}
+      {data.post.metadata.date}{#if data.post.metadata.tags?.length}<span class="bar">|</span>{data.post.metadata.tags.join(', ')}{/if}
     </p>
   </div>
 
