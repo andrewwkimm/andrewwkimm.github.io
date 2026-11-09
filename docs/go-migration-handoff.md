@@ -748,6 +748,8 @@ Vertical slice, in order:
 6. Whether to write the spacing rules and color constraint into `README.md` as stated rules rather than leaving them implicit in the token values.
     
 7. Whether to draft the static-generator benchmark case for `Skills/go-project-layout/SKILL.md`.
+
+8. Reading list storage, deferred 2026-11-09. One Markdown file per book (this handoff's original plan) or one data file. Facts: `src/lib/books.ts` holds 82 books, one has a review, none stores a link (the Amazon URL is built from title and author). Candidate: one `content/books.yaml` with optional `status`, `genres`, `review`; move a review to `content/reviews/<slug>.md` once one gets long. Settle before converting reading content.
     
 
 ## 16. Unverified claims
